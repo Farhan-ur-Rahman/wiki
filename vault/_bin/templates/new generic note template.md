@@ -14,16 +14,5 @@ id: <% tp.file.creation_date("YYYYMMDDHHmmss") %>
 title:  <%* tR += "\"" + result + "\"" %>
 created: <% moment(tp.file.creation_date("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() %>
 updated: <% moment(tp.file.last_modified_date("YYYY-MM-DDTHH:mm:ss.SSSZ")).toISOString() %>
-tags:
-  - podcasts
+tags: <% await tp.system.prompt("Enter multiple tags like: [tag1, tag2, tag3]") %>
 ---
-
-Podcast:: <% await tp.system.prompt("Enter name of the podcast") %>
-Episode:: <%* tR += "\"" + result + "\"" %>
-Link:: <% await tp.system.prompt("Enter URL(link) to the episode") %>
-Description:: <% await tp.system.prompt("Enter description of the podcast") %>
-Areas:: <% await tp.system.prompt("Enter [[backlinks]] to topics - comma separated") %>
-
----
-
-<% tp.file.cursor() %>

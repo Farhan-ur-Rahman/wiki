@@ -19,7 +19,7 @@ tags: <% await tp.system.prompt("Enter multiple tags like: [tag1, tag2, tag3]") 
 
 Title:: <%* tR += "\"" + result + "\"" %>
 Link:: <% await tp.system.prompt("Enter link to the article") %>
-Topics:: <% await tp.system.prompt("Enter backlinks to topics - comma separated") %>
+Areas:: <% await tp.system.prompt("Enter backlinks to topics - comma separated") %>
 Status:: <% await tp.system.suggester(["read", "unread", "partially read"], ["read", "unread", "partially read"]) %>
 
 ---

@@ -6,6 +6,8 @@ tags:
 
 - [[Evergreen Notes]]
 
+![[like this]]
+
 ## Hotkeys/Workflows
 
 | Hotkey          | What it does                                                |

@@ -20,7 +20,7 @@ tags:
 
 Title:: <%* tR += "\"" + result + "\"" %>
 Link:: <% await tp.system.prompt("Enter URL(link) to the article") %>
-Topics:: <% await tp.system.prompt("Enter [[backlinks]] to topics - comma separated") %>
+Areas:: <% await tp.system.prompt("Enter [[backlinks]] to topics - comma separated") %>
 Status:: <% await tp.system.suggester(["#read", "#unread", "#partially-read"], ["#read", "#unread", "#partially-read"]) %>
 
 ---

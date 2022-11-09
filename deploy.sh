@@ -1,7 +1,7 @@
 # Config
-git_output="/home/igloo/vault-template/output"
-obsidian_folder="/home/igloo/vault-template/vault"
-root_folder="/home/igloo/vault-template/"
+git_output="/Users/Farhan/Desktop/wiki/output"
+obsidian_folder="/Users/Farhan/Desktop/wiki/vault"
+root_folder="/Users/Farhan/Desktop/wiki"
 
 # Move to output folder and make sure it is up to date
 cd $git_output

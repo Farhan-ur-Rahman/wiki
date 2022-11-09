@@ -113,5 +113,29 @@
     }
   ],
   "obsidian-completr:completr-bypass-enter-key": [],
-  "obsidian-completr:completr-bypass-tab-key": []
+  "obsidian-completr:completr-bypass-tab-key": [],
+  "obsidian-wikipedia:wikipedia-get-active-note-title": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "/"
+    }
+  ],
+  "obsidian-wikipedia:wikipedia-get-search-term": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "."
+    }
+  ],
+  "podnotes:capture-timestamp": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": ","
+    }
+  ]
 }
