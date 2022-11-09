@@ -38,6 +38,8 @@ cd $git_output
 mv html/* ./
 rm -rf html/
 
-# git add . --all
-# git commit -m "autopush"
-# git push -f
+cd $root_folder
+
+git add . --all
+git commit -m "autopush"
+git push -f
