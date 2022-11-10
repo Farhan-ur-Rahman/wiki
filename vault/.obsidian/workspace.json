@@ -4,37 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "bda906318d0104b4",
+        "id": "87f006e0ea66efb2",
         "type": "tabs",
         "children": [
           {
-            "id": "139d59d93e9914bc",
+            "id": "1ac0a67783a4d364",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 Areas/02 Areas.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "43532f2a072f5114",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 Areas/DEVOPS.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -175,17 +156,17 @@
     "direction": "horizontal",
     "width": 300.5
   },
-  "active": "43532f2a072f5114",
+  "active": "1004da06164859e3",
   "lastOpenFiles": [
-    "02 Areas/02 Areas.md",
-    "02 Areas/DEVOPS/ANSIBLE.md",
-    "02 Areas/DEVOPS/IIS SETUP WITH PUPPET.md",
-    "02 Areas/DEVOPS/KUBERNETS.md",
-    "02 Areas/DEVOPS/SERVICENOW.md",
-    "02 Areas/DEVOPS/TERRAFORM.md",
-    "02 Areas/DEVOPS/JENKINS.md",
     "02 Areas/DEVOPS.md",
-    "02 Areas/DEVOPS/PUPPET.md",
+    "02 Areas/02 Areas.md",
+    "02 Areas/ANSIBLE.md",
+    "02 Areas/IIS SETUP WITH PUPPET.md",
+    "02 Areas/KUBERNETS.md",
+    "02 Areas/SERVICENOW.md",
+    "02 Areas/TERRAFORM.md",
+    "02 Areas/JENKINS.md",
+    "02 Areas/PUPPET.md",
     "index.md"
   ]
 }

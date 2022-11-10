@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="servicenow">
+                <meta name="node_id" content="terraform">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -47,9 +47,9 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'servicenow';
+                        const CURRENT_NODE = 'terraform';
                         const HTML_URL_PREFIX = '';
-                        const PAGE_DEPTH = 2;
+                        const PAGE_DEPTH = 1;
                 </script>
         </head>
 
@@ -161,7 +161,7 @@
                 }
         </script>
                                                         <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=servicenow" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=terraform" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -205,130 +205,35 @@
                     <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
                         <div style="flex:1;display: none;"></div>
                         <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
-                            <a href="/" style="color: rgb(var(--normal-text-color));">Home</a> / <a href="/02 Areas/02 Areas.html" style="color: var(--normal-text-color);">02 Areas</a> / <a href="/02 Areas/DEVOPS.html" style="color: var(--normal-text-color);">DEVOPS</a> / <a href="/02 Areas/DEVOPS/SERVICENOW.html" >SERVICENOW</a>
+                            <a href="/" style="color: rgb(var(--normal-text-color));">Home</a> / <a href="/02 Areas/02 Areas.html" style="color: var(--normal-text-color);">02 Areas</a> / <a href="/02 Areas/TERRAFORM.html" >TERRAFORM</a>
                         </div>
                     </div>
+<p><strong>#Terraform AWS</strong>   </p>
+<p>to create a instance in AWS using terraform we have to use visual studio to write code in it.   </p>
+<p>first link your AWS account into your machine and then \   </p>
+<p>make a folder in the VS and make a new file in it as main.TF   </p>
+<p>write code as   </p>
+<h1 id="create-a-new-instance-of-the-latest-ubuntu-14-04-on-an">Create a new instance of the latest Ubuntu 14.04 on an</h1>
 <div class="toc">
-<ul></ul>
-</div>
-<p><strong>#ServiceNow</strong>    </p>
-<p>Personally experienced the ServiceNow Ticketing tool with the instance ID and used it as a Administrator User.   </p>
-<p>Looked out the interface of the ticketing system that is ServiceNow.   </p>
-<p>learned to raise a manual ticket by filling the ticket number and the issues facing in the ticket should be filled in the description box.   </p>
-<p>There is also a priority box that shows if the issue is low or high   </p>
-<p>Learned to add  users and groups and roles and how to manage them.   </p>
-<p>If the issue is been resolved then it should be put to resolved if not then it should be assigned to the partner, After confirming with them the ticket should be set to (in process) and then submit the ticket.   </p>
-<p>SERVICENOW    </p>
-<p><strong>in service now</strong>    </p>
-<p>NUMBER MAINTAINENCE   </p>
-<p>number maintainece application is used to giver numbering for the record table    </p>
-<p>creating an entry in number maintainence for the table    </p>
-<p>How to add prefix    </p>
-<p>default the number field with the next padded  number    </p>
-<p>All the numbering is stored in number maintenance table.   </p>
-<p>Giving users roles and impersonating  them and modifying interface and editing the user details and re-creating the passwords also removing roles from them   </p>
-<p>created a new item in software catalogs to practice and added new reference fields to the table and have given a price to item and also have added  of user details and user email to know who have ordered the item   </p>
-<p><strong>serviceNow service portal</strong>   </p>
-<p>CREATE NEW CATALOGS   </p>
-<p>create new catalogs in the service portal table and also how to add new items in the categories list and populating the fields whithin the help of the reference fields and making them mandatory so the no user can submit the form without filling that specific field and giving the default values to fields   </p>
-<p><strong>ServiceNow</strong>    </p>
-<p>CREATING FIELDS   </p>
-<ol>
-<li>How to create field types and how to set them accordingly.   </li>
-<li>How to set reference tables is the fields    </li>
-<li>how to set options in the fields   </li>
-<li>How to create a marking tick field by selecting the True/false type   </li>
-</ol>
-<p>Gone through the servicenow class   </p>
-<p>learned how to populate the variables of a catalog item   </p>
-<p>overviewed the client script that uses to populate the variables in javascript form    </p>
-<p>Catalog UI Policies:   </p>
-<p>They are used to make variables  Visible/Hide  , Mandatory/Optional for the specific field    </p>
-<p>SERVICENOW    </p>
-<p>how to create a variable sets and how to add the to the other catalogs and also how to set that specific group cannot access the catalogs from there end   </p>
-<p>ORDER GUIDE   </p>
-<p>it is similar to catalog item but it is used to order multiple items at a time like we are saving the items in the cart and ordering them at a time   </p>
-<p>when order is created using order guide a request gets created in REQUEST TABLE SC-REQUEST   </p>
-<p>new hire order guide it helps the organization to give access to the new id card or new desk location or a laptop to the applicant   </p>
-<p>3 steps in order guide    </p>
-<p>Describe needs    </p>
-<p>choose options   </p>
-<p>checkout same as we order things on amazon   </p>
-<p>SERVICENOW    </p>
-<p>Firstly I have gone through the    </p>
-<p>Catalog Items   </p>
-<p>AND    </p>
-<p>Records Producers of ServiceNow : They have workflow configuration    </p>
-<p>End User request gets created on any task extended tables (incidents, problem , any custom table    </p>
-<p>They provide access to the end user to produce records in the table   </p>
-<p>Catalog items- end request creates on   </p>
-<p>Sc-request table   </p>
-<p>WORKFLOW   </p>
-<p>Workflows:- They are the backend process that runs for the catalog item request fulfilment   </p>
-<p>workflow contain sequence Of activities that run based on the conditions.   </p>
-<p>Activities:   </p>
-<p>Individual Unit that is use in the workflow' for  certain logic exciton.   </p>
-<p>transition lines: These are lines that are used to    </p>
-<p>Join the activities within the workflow.   </p>
-<p>Canvas table : The tab whose the workflow is displayed.   </p>
-<p>Title : displays title of the workflow    </p>
-<p>Pallet : portion where the workflows and the core activities are displayed.   </p>
-<p>Core    </p>
-<p>CORE ACTIVITIES   </p>
 <ul>
-<li>Approvals   </li>
+<li><a href="#create-a-new-instance-of-the-latest-ubuntu-14-04-on-an" class="anchor-link">Create a new instance of the latest Ubuntu 14.04 on an</a></li>
+<li><a href="#t2-micro-node-with-an-aws-tag-naming-it-helloworld" class="anchor-link">t2.micro node with an AWS Tag naming it "HelloWorld"</a></li>
 </ul>
-<p>-conditions   </p>
-<p>-notifications   </p>
-<p>-on call   </p>
-<p>-service catalog   </p>
-<p>-sub-flows   </p>
-<p>-tasks    </p>
-<p>-attachment note   </p>
-<p>-catalog tasks    </p>
-<p>-create task   </p>
-<p>Timers    </p>
-<p>Utilities   </p>
-<p>-Branch -Single/Multiple outputs    </p>
-<p>-Join- multiple inputs / single input   </p>
-<p>SERVICENOW   </p>
-<p>ServiceNow:    </p>
-<ol>
-<li>
-<p>Auto Populating fields by reading the data from requested for field in java script.    </p>
-</li>
-<li>
-<p>Catalog Item access via groups or roles   </p>
-</li>
-</ol>
-<p>-Remove access to catalog item to particular user or groups   </p>
-<p>ServiceNow: Import &amp; Export, Variable Set, Request Id contains multiple RITM(Requested Items).   </p>
-<p>ServiceNow: Record Procedures, Workflows UI intro   </p>
-<p>WORKFLOW   </p>
-<p>SERVICENOW    </p>
-<p>had an deep overview of workflow using core activities and also some scripts that helps to create workflows   </p>
-<p>WORKFLOW EDITOR    </p>
-<p>approval user   </p>
-<p>approval group   </p>
-<p>run script   </p>
-<p>IMPORTING data into tables and adding data into specific fields   </p>
-<p>SOURCE OF DATA    </p>
-<p>2types    </p>
-<p>File base (excel, csv, xml)    </p>
-<p>Network Based FTP   </p>
-<p><strong>Later, I practised utilising clint scripting to auto-populate fields after going through the revision of servicenow. Using JavaScript</strong>    </p>
-<p>Later,I have gone through servicenow training utilising the HTML fields provided by the serviceNow, I worked on providing a notification for any record inserts or updates.   </p>
-<p>When something is completed or changed in ServiceNow, an EVENT-based notification is sent out.   </p>
-<p>I have started my day with previous topics of ServiceNow as a revision in that we have practically practiced how to import sets and transform map them manually or automatically , After that we have gone through the email notifications scripting and business rules   </p>
-<p>from email scripting we can pass some syntax so that the email should be sent accordingly.   </p>
-<p>*<em>#ServiceNowTags*</em>   </p>
-<p>onLoad-   </p>
-<p>g_form.getvalue(g);   </p>
-<p>g_form.setvalue();   </p>
-<p>g_form.addErrorMessege();   </p>
-<p>g_form.getInfoMessege(g_user.firstName);   </p>
-<p><strong>#ServiceNowPractice</strong>    </p>
-<p><a href="https://www.servicenow.com/community/it-service-management-articles/itsm-use-cases-scenarios-for-servicenow-newbie-developers/ta-p/2305060" target="_blank" class="external-link">https://www.servicenow.com/community/it-service-management-articles/itsm-use-cases-scenarios-for-servicenow-newbie-developers/ta-p/2305060</a></p>
+</div>
+<h1 id="t2-micro-node-with-an-aws-tag-naming-it-helloworld">t2.micro node with an AWS Tag naming it "HelloWorld"</h1>
+<p>provider "aws" {   </p>
+<p>region = "us-west-2"   </p>
+<p>}   </p>
+<p>resource "aws_instance" "web" {   </p>
+<p>ami           = "${data.aws_ami.ubuntu.id}"   </p>
+<p>instance_type = "t2.micro"   </p>
+<p>tags = {   </p>
+<p>Name = "HelloWorld"   </p>
+<p>}   </p>
+<p>}     </p>
+<p>TERRAFORM INIT    </p>
+<p>TERRAFORM PLAN    </p>
+<p>TERRAFORM APPLY</p>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -343,13 +248,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A46883349546901619384808671377686039714{level}" class="graph_div"></div>
+    <div id="A160295375511967663085754492495333451489{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B46883349546901619384808671377686039714{level}" level="{level}" note_temp_id="46883349546901619384808671377686039714" onclick="window.ObsHtmlGraph.run(this, '46883349546901619384808671377686039714', 'servicenow');">
+        <button class="graph_button graph_show_button" id="B160295375511967663085754492495333451489{level}" level="{level}" note_temp_id="160295375511967663085754492495333451489" onclick="window.ObsHtmlGraph.run(this, '160295375511967663085754492495333451489', 'terraform');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C46883349546901619384808671377686039714{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C160295375511967663085754492495333451489{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
@@ -384,30 +289,25 @@
 </div>
 <button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">02 Areas</button>
 <div id="folder-container-2" class="dir-container requires_js active" path="/02 Areas">
-	<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">DEVOPS</button>
-	<div id="folder-container-3" class="dir-container requires_js active" path="/02 Areas/DEVOPS">
-		<ul class="dir-list">
-			<li><a class="" href="/02 Areas/DEVOPS/ANSIBLE.html"  >ANSIBLE</a></li>
-			<li><a class="" href="/02 Areas/DEVOPS/IIS SETUP WITH PUPPET.html"  >IIS SETUP WITH PUPPET</a></li>
-			<li><a class="" href="/02 Areas/DEVOPS/JENKINS.html"  >JENKINS</a></li>
-			<li><a class="" href="/02 Areas/DEVOPS/KUBERNETS.html"  >KUBERNETS</a></li>
-			<li><a class="" href="/02 Areas/DEVOPS/PUPPET.html"  >PUPPET</a></li>
-			<li><a class="active" href="/02 Areas/DEVOPS/SERVICENOW.html"  >SERVICENOW</a></li>
-			<li><a class="" href="/02 Areas/DEVOPS/TERRAFORM.html"  >TERRAFORM</a></li>
-		</ul>
-	</div>
 	<ul class="dir-list">
 		<li><a class="" href="/02 Areas/02 Areas.html"  >02 Areas</a></li>
+		<li><a class="" href="/02 Areas/ANSIBLE.html"  >ANSIBLE</a></li>
 		<li><a class="" href="/02 Areas/DEVOPS.html"  >DEVOPS</a></li>
 		<li><a class="" href="/02 Areas/Health.html"  >Health</a></li>
+		<li><a class="" href="/02 Areas/IIS SETUP WITH PUPPET.html"  >IIS SETUP WITH PUPPET</a></li>
+		<li><a class="" href="/02 Areas/JENKINS.html"  >JENKINS</a></li>
+		<li><a class="" href="/02 Areas/KUBERNETS.html"  >KUBERNETS</a></li>
 		<li><a class="" href="/02 Areas/PKM.html"  >PKM</a></li>
+		<li><a class="" href="/02 Areas/PUPPET.html"  >PUPPET</a></li>
+		<li><a class="" href="/02 Areas/SERVICENOW.html"  >SERVICENOW</a></li>
 		<li><a class="" href="/02 Areas/Skepticism.html"  >Skepticism</a></li>
+		<li><a class="active" href="/02 Areas/TERRAFORM.html"  >TERRAFORM</a></li>
 	</ul>
 </div>
-<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">03 Resources</button>
-<div id="folder-container-4" class="dir-container requires_js " path="/03 Resources">
-	<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Articles</button>
-	<div id="folder-container-5" class="dir-container requires_js " path="/03 Resources/Articles">
+<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">03 Resources</button>
+<div id="folder-container-3" class="dir-container requires_js " path="/03 Resources">
+	<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Articles</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="/03 Resources/Articles">
 		<ul class="dir-list">
 			<li><a class="" href="/03 Resources/Articles/50 Skeptic Concepts from “The Skeptics’ Guide to the Universe” by Steven Novella (Book Summary).html"  >50 Skeptic Concepts from “The Skeptics’ Guide to the Universe” by Steven Novella (Book Summary)</a></li>
 			<li><a class="" href="/03 Resources/Articles/Articles.html"  >Articles</a></li>
@@ -415,15 +315,15 @@
 			<li><a class="" href="/03 Resources/Articles/Tiago Forte (@fortelabs).html"  >Tiago Forte (@fortelabs)</a></li>
 		</ul>
 	</div>
-	<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">Books</button>
-	<div id="folder-container-6" class="dir-container requires_js " path="/03 Resources/Books">
+	<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Books</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="/03 Resources/Books">
 		<ul class="dir-list">
 			<li><a class="" href="/03 Resources/Books/Books.html"  >Books</a></li>
 			<li><a class="" href="/03 Resources/Books/Building a Second Brain.html"  >Building a Second Brain</a></li>
 		</ul>
 	</div>
-	<button id="folder-7" class="dir-button" onclick="toggle_dir(this.id)">Podcasts</button>
-	<div id="folder-container-7" class="dir-container requires_js " path="/03 Resources/Podcasts">
+	<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">Podcasts</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="/03 Resources/Podcasts">
 		<ul class="dir-list">
 			<li><a class="" href="/03 Resources/Podcasts/Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97.html"  >Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97</a></li>
 			<li><a class="" href="/03 Resources/Podcasts/Podcasts.html"  >Podcasts</a></li>
@@ -434,16 +334,16 @@
 		<li><a class="" href="/03 Resources/03 Resources.html"  >03 Resources</a></li>
 	</ul>
 </div>
-<button id="folder-8" class="dir-button" onclick="toggle_dir(this.id)">04 Archive</button>
-<div id="folder-container-8" class="dir-container requires_js " path="/04 Archive">
+<button id="folder-7" class="dir-button" onclick="toggle_dir(this.id)">04 Archive</button>
+<div id="folder-container-7" class="dir-container requires_js " path="/04 Archive">
 	<ul class="dir-list">
 		<li><a class="" href="/04 Archive/04 Archive.html"  >04 Archive</a></li>
 		<li><a class="" href="/04 Archive/Evergreen Notes.html"  >Evergreen Notes</a></li>
 		<li><a class="" href="/04 Archive/like this.html"  >like this</a></li>
 	</ul>
 </div>
-<button id="folder-9" class="dir-button" onclick="toggle_dir(this.id)">05 Inbox</button>
-<div id="folder-container-9" class="dir-container requires_js " path="/05 Inbox">
+<button id="folder-8" class="dir-button" onclick="toggle_dir(this.id)">05 Inbox</button>
+<div id="folder-container-8" class="dir-container requires_js " path="/05 Inbox">
 	<ul class="dir-list">
 		<li><a class="" href="/05 Inbox/05 Inbox.html"  >05 Inbox</a></li>
 	</ul>

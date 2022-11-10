@@ -459,6 +459,7 @@ Defines
 DevOps
 Docker
 DSC
+DEVOPS
 SSSZ
 Suggester
 Show
