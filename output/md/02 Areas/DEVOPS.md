@@ -1,0 +1,17 @@
+---
+category: '2022'
+created: 2022-11-10 18:46:23.993000+00:00
+tags:
+- areas
+title: DEVOPS
+updated: 2022-11-10 18:46:23.993000+00:00
+---
+   
+   
+- [ANSIBLE](../02%20Areas/DEVOPS/ANSIBLE.md)   
+- [PUPPET](../02%20Areas/DEVOPS/PUPPET.md)   
+- [JENKINS](../02%20Areas/DEVOPS/JENKINS.md)   
+- [KUBERNETS](../02%20Areas/DEVOPS/KUBERNETS.md)   
+- [TERRAFORM](../02%20Areas/DEVOPS/TERRAFORM.md)   
+- [IIS SETUP WITH PUPPET](../02%20Areas/DEVOPS/IIS%20SETUP%20WITH%20PUPPET.md)   
+- [SERVICENOW](../02%20Areas/DEVOPS/SERVICENOW.md)
