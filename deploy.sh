@@ -33,13 +33,17 @@ else
     echo "Successfully created html code"
 fi
 
-# Push changes
+# push changes to main wiki
+
+git add -A
+git commit -m "backup $(date '+%Y-%m-%d')"
+git push 
+
+# Push changes to publish
 cd $git_output
 mv html/* ./
 rm -rf html/
 
-cd $root_folder
-
 git add . --all
 git commit -m "autopush"
-git push -f
+git push -uf origin main
