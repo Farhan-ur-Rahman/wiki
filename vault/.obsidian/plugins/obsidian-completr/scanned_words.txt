@@ -63,6 +63,8 @@ testing
 technologies
 test
 teams
+traffic
+top
 file
 for
 from
@@ -99,6 +101,7 @@ freed
 fold
 forums
 five
+flexible
 category
 creation
 created
@@ -178,6 +181,14 @@ composed
 connect
 command
 cheaper
+containrized
+container
+clusters
+cluster
+containerized
+containers
+create
+cloud
 date
 database
 does
@@ -225,6 +236,13 @@ debian
 deliver
 deployment
 deploy
+decrease
+distributing
+dependences
+device
+distributes
+downloaded
+docker
 YYYY
 YYYYMMDDHHmmss
 YouTube
@@ -309,6 +327,14 @@ small
 saw
 single
 solutions
+strategy
+scalability
+services
+set
+stack
+schedules
+stands
+started
 moment
 mm
 modified
@@ -361,6 +387,9 @@ made
 manage
 model
 many
+maximizing
+manages
+microsoft
 MM
 Move
 Mover
@@ -411,6 +440,7 @@ Debian
 Data
 Defines
 DevOps
+Docker
 SSSZ
 Suggester
 Show
@@ -452,6 +482,8 @@ SSL
 System
 Solaris
 SECTION
+Scaling
+Secondly
 updated
 untitled
 using
@@ -475,6 +507,7 @@ usually
 underlying
 utility
 useful
+upto
 last
 link
 life
@@ -502,6 +535,10 @@ limited
 listed
 lowest
 list
+lightweight
+load
+layer
+logged
 projects
 purpose
 prompt
@@ -577,6 +614,15 @@ provide
 points
 perfect
 practices
+packages
+packet
+packets
+physical
+providers
+problems
+pulled
+password
+provided
 aliases
 areas
 and
@@ -654,6 +700,13 @@ against
 ansible
 automation
 allow
+automating
+automates
+availability
+among
+app
+application
+azure
 Areas
 Area
 Additional
@@ -686,6 +739,10 @@ ANSIBLE
 ANOTHER
 Ansible
 Automation
+AND
+Application
+AWS
+API
 of
 on
 or
@@ -715,6 +772,7 @@ other
 override
 os
 order
+orchestration
 Responsibility
 Research
 Reviewer
@@ -758,6 +816,9 @@ Is
 IP
 IAC
 INSTALLING
+Its
+INGRESS
+Interface
 For
 Fat
 Fitness
@@ -776,6 +837,7 @@ From
 Figuring
 Factor
 Fedora
+Firstly
 general
 github
 generator
@@ -794,6 +856,8 @@ graphical
 global
 given
 gone
+google
+group
 notes
 note
 new
@@ -812,6 +876,10 @@ not
 needed
 number
 nodes
+necessary
+networks
+networking
+node
 backlinked
 books
 backlink
@@ -850,6 +918,8 @@ basis
 being
 boards
 backup
+backend
+balancer
 respectively
 resource
 root
@@ -891,6 +961,10 @@ require
 run
 red
 results
+runtime
+running
+runtimes
+runs
 Untitled
 Use
 URL
@@ -898,6 +972,8 @@ Unordered
 Update
 UTC
 Universe
+UDP
+Using
 Picked
 Plugins
 Plugin
@@ -927,6 +1003,7 @@ Puppet
 Providing
 PDK
 Playbook
+Programming
 VALUE
 Videos
 VUUp
@@ -948,6 +1025,7 @@ version
 value
 variables
 variable
+virtual
 This
 Table
 Tags
@@ -984,6 +1062,8 @@ They
 Tasks
 There
 TARGET
+TYPES
+TCP
 is
 index
 it
@@ -1030,6 +1110,9 @@ integration
 interface
 integrating
 including
+increase
+inspects
+isolated
 Hotkeys
 Hotkey
 High
@@ -1048,6 +1131,8 @@ Human
 How
 Hoping
 HIERA
+HTTP
+HTTPS
 Workflows
 What
 Workout
@@ -1092,6 +1177,8 @@ Conditions
 Condition
 CI
 CD
+Container
+Containerizing
 will
 with
 what
@@ -1188,6 +1275,7 @@ hiera
 highest
 handlers
 hat
+had
 quality
 quotes
 quickadd
@@ -1240,6 +1328,7 @@ example
 ensure
 environment
 executed
+efficiently
 Note
 Norton
 Nutrition
@@ -1288,6 +1377,10 @@ BrianDMoore
 Book
 BLITZ
 Boosts
+Balancing
+BALANCING
+BASICS
+BALANCER
 your
 you
 years
@@ -1301,6 +1394,8 @@ Qm
 Knight
 Kian
 Knowledge
+KUBERNETES
+Kubernetes
 Enter
 Episode
 Excel
@@ -1333,6 +1428,9 @@ Leucine
 List
 Like
 LANGUAGE
+Load
+LOAD
+LOCALHOST
 Journal
 John
 JENKINS
@@ -1350,6 +1448,7 @@ knowledge
 known
 know
 key
+kubernetes
 Zero
 ZWHZKUDNhY
 XZ

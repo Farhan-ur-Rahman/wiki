@@ -4,76 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "fa2ad0b3dba12773",
+        "id": "bda906318d0104b4",
         "type": "tabs",
         "children": [
           {
-            "id": "18e925cd35f8f515",
+            "id": "139d59d93e9914bc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DEVOPS/JENKINS.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "762b16d25c57bd12",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DEVOPS/TERRAFORM.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "65ffed36d7efc69d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DEVOPS/KUBERNETS.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6d0917d648cf51e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DEVOPS/SERVICENOW.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3b57f5be3ee7ed0e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DEVOPS/IIS SETUP WITH PUPPET.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DEVOPS/IIS SETUP WITH PUPPET.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DEVOPS/IIS SETUP WITH PUPPET.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "DEVOPS/IIS SETUP WITH PUPPET.md"
-              }
+              "state": {}
             }
           },
           {
@@ -208,23 +146,23 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
     "width": 300.5
   },
-  "active": "1004da06164859e3",
+  "active": "139d59d93e9914bc",
   "lastOpenFiles": [
-    "DEVOPS/SERVICENOW.md",
-    "DEVOPS/KUBERNETS.md",
-    "DEVOPS/TERRAFORM.md",
-    "DEVOPS/JENKINS.md",
+    "02 Areas/DEVOPS/KUBERNETS.md",
+    "02 Areas/DEVOPS/IIS SETUP WITH PUPPET.md",
+    "02 Areas/DEVOPS/SERVICENOW.md",
+    "02 Areas/DEVOPS/TERRAFORM.md",
+    "02 Areas/DEVOPS/JENKINS.md",
     "DEVOPS.md",
-    "DEVOPS/ANSIBLE.md",
-    "DEVOPS/PUPPET.md",
+    "02 Areas/DEVOPS/ANSIBLE.md",
+    "02 Areas/DEVOPS/PUPPET.md",
     "index.md",
-    "04 Archive/like this.md",
-    "04 Archive/04 Archive.md"
+    "04 Archive/like this.md"
   ]
 }
