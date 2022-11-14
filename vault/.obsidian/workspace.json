@@ -11,11 +11,30 @@
             "id": "1ac0a67783a4d364",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "02 Areas/02 Areas.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "400ef8cab363172f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 Areas/PUPPET.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02 Areas/DEVOPS.md",
+                "file": "02 Areas/PUPPET.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 Areas/DEVOPS.md",
+                "file": "02 Areas/PUPPET.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 Areas/DEVOPS.md"
+                "file": "02 Areas/PUPPET.md"
               }
             }
           },
@@ -158,15 +177,15 @@
   },
   "active": "1004da06164859e3",
   "lastOpenFiles": [
+    "02 Areas/SERVICENOW.md",
+    "02 Areas/PUPPET.md",
+    "02 Areas/Skepticism.md",
+    "02 Areas/WCF.md",
     "02 Areas/DEVOPS.md",
     "02 Areas/02 Areas.md",
+    "Untitled.md",
     "02 Areas/ANSIBLE.md",
     "02 Areas/IIS SETUP WITH PUPPET.md",
-    "02 Areas/KUBERNETS.md",
-    "02 Areas/SERVICENOW.md",
-    "02 Areas/TERRAFORM.md",
-    "02 Areas/JENKINS.md",
-    "02 Areas/PUPPET.md",
-    "index.md"
+    "02 Areas/KUBERNETS.md"
   ]
 }

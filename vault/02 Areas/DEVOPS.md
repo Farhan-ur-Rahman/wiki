@@ -14,3 +14,5 @@ updated: 2022-11-10T18:46:23.993Z
 - [[TERRAFORM]]
 - [[IIS SETUP WITH PUPPET]]
 - [[SERVICENOW]]
+- [[WCF]]
+- 

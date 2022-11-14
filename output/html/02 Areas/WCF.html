@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="ansible">
+                <meta name="node_id" content="wcf">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -47,7 +47,7 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'ansible';
+                        const CURRENT_NODE = 'wcf';
                         const HTML_URL_PREFIX = '';
                         const PAGE_DEPTH = 1;
                 </script>
@@ -161,7 +161,7 @@
                 }
         </script>
                                                         <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=ansible" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=wcf" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -205,35 +205,52 @@
                     <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
                         <div style="flex:1;display: none;"></div>
                         <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
-                            <a href="/" style="color: rgb(var(--normal-text-color));">Home</a> / <a href="/02 Areas/02 Areas.html" style="color: var(--normal-text-color);">02 Areas</a> / <a href="/02 Areas/ANSIBLE.html" >ANSIBLE</a>
+                            <a href="/" style="color: rgb(var(--normal-text-color));">Home</a> / <a href="/02 Areas/02 Areas.html" style="color: var(--normal-text-color);">02 Areas</a> / <a href="/02 Areas/WCF.html" >WCF</a>
                         </div>
                     </div>
 <div class="toc">
 <ul></ul>
 </div>
-<p><strong>#ANSIBLE</strong>   </p>
-<p><strong>Playbook</strong>   </p>
-<p>it uses YAML (YET ANOTHER MARKUP LANGUAGE) scripting that uses in playbook to write codes.   </p>
-<p>Playbook is like a file where you can write codes  that consists of variables, tasks, handlers   </p>
-<p>Each playbook is composed of one or more ‘modules’ in a list. Module is a collection of configuration files   </p>
-<p>Playbook are divides into many section s like-   </p>
-<p><strong>target section - Defines that host against which playbook task has to be executed</strong>   </p>
-<p><strong>variable section - Defines variable</strong>   </p>
-<p><strong>Task it performs the process of all modules that we need to run in order</strong>   </p>
-<p>Overviewed the codes inn playbook practically in ansible server    </p>
-<p><strong>Ansible Roles,Conditions</strong>   </p>
-<p><strong>- - - # Condition Playbook</strong>   </p>
-<ul>
-<li><strong>host: demo</strong>   </li>
-</ul>
-<p><strong>user: ansible        TARGET  SECTION</strong>   </p>
-<p><strong>become: yes</strong>   </p>
-<p><strong>connect : ssh</strong>   </p>
-<p><strong>name: install apache on debian</strong>   </p>
-<p><strong>command: apt-get -y install apache2</strong>   </p>
-<p><strong>when: ansible_os_family == “Debian”</strong>   </p>
-<p><strong>name: install apache for  red-hat</strong>   </p>
-<p><strong>Ansible uses the push mechanism from the nodes</strong></p>
+<p><strong>What is WCF?</strong>   <br />
+<strong>WCF</strong> stands for <strong>Windows Communication Foundation</strong> and is part of .NET 3.0. WCF is Microsoft platform for building distributed and interoperable applications.     </p>
+<p><strong>What is a distributed application?</strong>   <br />
+In simple terms a distributed application, is an application where parts of it run on 2 or more computers. <strong>Distributed applications</strong> are also called as <strong>connected systems.</strong>     </p>
+<p><strong>Examples:</strong>   <br />
+A web application running on one machine and a web service that this application is consuming is running on another machine.   <br />
+<img alt="Distributed System" src="https://1.bp.blogspot.com/-LkoamBJfsSQ/UofZ3J6jx1I/AAAAAAAAHck/oAxSs9dSCcA/s1600/Distributed+System.png" />     </p>
+<p>An enterprise web application may have the following tiers, and each tier may be running on a different machine   <br />
+1. Presentation tier   <br />
+2. Business tier   <br />
+3. Data Access tier   <br />
+<img alt="Connected System" src="https://2.bp.blogspot.com/-O0N8uAnU0fg/UofdGKhX6yI/AAAAAAAAHdQ/gRiiR5b2YDY/s1600/Connected+System.png" />     </p>
+<p><strong>Why build distributed applications?</strong>   <br />
+There are several reasons for this   <br />
+<strong>1.</strong> An enterprise application may need to use the services provided by other enterprises. For example an ecommerce application may be using Paypal service for payments.   <br />
+<strong>2.</strong> For better scalability. An enterprise web application may have Presentation tier, Business tier, and Data Access tier, and each tier may be running on a different machine.     </p>
+<p><strong>What is an interoperable application?</strong>   <br />
+An application that can communicate with any other application that is built on any platform and using any programming language is called as an interoperable application. Web services are interoperable, where as .NET remoting services are not.     </p>
+<p>Web services can communicate with any application built on any platform, where as a .NET remoting service can be consumed only by a .net application.     </p>
+<p><strong>What technology choices did we have before WCF to build distributed applications?</strong>   <br />
+Enterprise Services   <br />
+Dot Net Remoting   <br />
+Web Services     </p>
+<p><strong>Why should we use WCF?</strong>   <br />
+Let's take this scenario   <br />
+<strong>We have 2 clients and we need to implement a service a for them.</strong>    <br />
+<strong>1.</strong> The first client is using a Java application to interact with our service, so for interoperability this client wants messages to be in <strong>XML format</strong> and the protocol to be <strong>HTTP.</strong>   <br />
+<strong>2.</strong> The second client uses .NET, so for better performance this client wants messages formatted in <strong>binary</strong> over <strong>TCP protocol</strong>.     </p>
+<p><strong>Without WCF</strong>   <br />
+<strong>1.</strong> To satisfy the first client requirement we end up implementing an ASMX web service, and   <br />
+<img alt="asp.net web service example" src="https://2.bp.blogspot.com/-zldxQC3WJ70/UofdjIeTZ4I/AAAAAAAAHdY/F06xA5kLbMM/s1600/asp.net+web+service+example.png" />     </p>
+<ol>
+<li>To satisfy the second client requirement we end up implementing a remoting service   <br />
+<img alt="Dot Net Remoting Example" src="https://4.bp.blogspot.com/-vZhCr7hVfI4/Uofd8kuyigI/AAAAAAAAHdg/Nzc6OqaWEJ4/s1600/Dot+Net+Remoting+Example.png" />     </li>
+</ol>
+<p>These are 2 different technologies, and have <strong>complete different programming models.</strong> So the developers have to learn different technologies.      </p>
+<p>So to <strong>unify and bring all these technologies under one roof</strong> Microsoft has come up with a single programming model that is called as <strong>WCF - Windows Communication Foundation.</strong>     </p>
+<p><strong>With WCF,</strong>   <br />
+You implement one service and we can configure as many end points as want to support all the client needs. To support the above 2 client requirements, we would configure 2 end points. In the endpoint configuration we can specify the protocols and message formats that we want to use.   <br />
+<img alt="WCF Example" src="https://4.bp.blogspot.com/-4j1EGHIUjAA/UofeSXiSIwI/AAAAAAAAHdo/zC5juwDP5IA/s1600/WCF+Example.png" /></p>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -248,13 +265,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A182772823764002898118906025933414290672{level}" class="graph_div"></div>
+    <div id="A71086252542959550133355302166791120181{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B182772823764002898118906025933414290672{level}" level="{level}" note_temp_id="182772823764002898118906025933414290672" onclick="window.ObsHtmlGraph.run(this, '182772823764002898118906025933414290672', 'ansible');">
+        <button class="graph_button graph_show_button" id="B71086252542959550133355302166791120181{level}" level="{level}" note_temp_id="71086252542959550133355302166791120181" onclick="window.ObsHtmlGraph.run(this, '71086252542959550133355302166791120181', 'wcf');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C182772823764002898118906025933414290672{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C71086252542959550133355302166791120181{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
@@ -291,7 +308,7 @@
 <div id="folder-container-2" class="dir-container requires_js active" path="/02 Areas">
 	<ul class="dir-list">
 		<li><a class="" href="/02 Areas/02 Areas.html"  >02 Areas</a></li>
-		<li><a class="active" href="/02 Areas/ANSIBLE.html"  >ANSIBLE</a></li>
+		<li><a class="" href="/02 Areas/ANSIBLE.html"  >ANSIBLE</a></li>
 		<li><a class="" href="/02 Areas/DEVOPS.html"  >DEVOPS</a></li>
 		<li><a class="" href="/02 Areas/Health.html"  >Health</a></li>
 		<li><a class="" href="/02 Areas/IIS SETUP WITH PUPPET.html"  >IIS SETUP WITH PUPPET</a></li>
@@ -302,7 +319,7 @@
 		<li><a class="" href="/02 Areas/SERVICENOW.html"  >SERVICENOW</a></li>
 		<li><a class="" href="/02 Areas/Skepticism.html"  >Skepticism</a></li>
 		<li><a class="" href="/02 Areas/TERRAFORM.html"  >TERRAFORM</a></li>
-		<li><a class="" href="/02 Areas/WCF.html"  >WCF</a></li>
+		<li><a class="active" href="/02 Areas/WCF.html"  >WCF</a></li>
 	</ul>
 </div>
 <button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">03 Resources</button>
