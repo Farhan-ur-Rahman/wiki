@@ -16,4 +16,6 @@ updated: 2022-11-10T18:46:23.993Z
 - [[SERVICENOW]]
 - [[WCF]]
 - [[Docker and DockerHub]]
-- 
+- [[GIT&GITHUB]]
+- [[RUBYonRAILS]]
+- [[KALI-LINUX]]

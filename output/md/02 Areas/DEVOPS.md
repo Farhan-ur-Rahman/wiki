@@ -17,4 +17,6 @@ updated: 2022-11-10 18:46:23.993000+00:00
 - [SERVICENOW](../02%20Areas/SERVICENOW.md)   
 - [WCF](../02%20Areas/WCF.md)   
 - [Docker and DockerHub](../02%20Areas/Docker%20and%20DockerHub.md)   
--
+- [GIT&GITHUB](../02%20Areas/GIT%26GITHUB.md)   
+- [RUBYonRAILS](../02%20Areas/RUBYonRAILS.md)   
+- [KALI-LINUX](../02%20Areas/KALI-LINUX.md)

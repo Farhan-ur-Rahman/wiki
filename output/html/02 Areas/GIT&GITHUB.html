@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="git&github">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Wiki</title>
+
+                <!-- Includes -->
+                
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'git&github';
+                        const HTML_URL_PREFIX = '';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+                        <div id="header_flex" class="flex_row">
+                                <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Wiki</a>
+                                <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                                        ≡
+                                </div>
+                                <div id="navbar" class="navbar requires_js">
+                                        
+                                        <div class="icon-tray">
+                                                <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                                        <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                                        <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=git&github" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                                        <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                                                <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                                                
+                                        </div>
+                                        <div style="display: flex; flex-direction:column">
+                                                <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                                                <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+                </div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+                                <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+                                <div id="left_pane_content" class="left_pane_content">
+                                        
+                                </div>
+                        </div>
+                        <div class="container">
+                                
+                    <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
+                        <div style="flex:1;display: none;"></div>
+                        <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
+                            <a href="/" style="color: rgb(var(--normal-text-color));">Home</a> / <a href="/02 Areas/02 Areas.html" style="color: var(--normal-text-color);">02 Areas</a> / <a href="/02 Areas/GIT&GITHUB.html" >GIT&GITHUB</a>
+                        </div>
+                    </div>
+<p>GIT GITHUB   </p>
+<h1 id="what-is-git"><strong>What is Git?</strong></h1>
+<div class="toc">
+<ul>
+<li><a href="#what-is-git" class="anchor-link">What is Git?</a></li>
+<li><a href="#git-repositories" class="anchor-link">Git Repositories</a></li>
+<li><a href="#before-using-git-we-should-know-why-we-need-it" class="anchor-link">Before using Git we should know why we need it</a><ul>
+<li><a href="#git-makes-it-easy-to-contribute-to-open-source-projects" class="anchor-link">Git makes it easy to contribute to open source projects</a></li>
+<li><a href="#documentation" class="anchor-link">Documentation</a></li>
+<li><a href="#integration-options" class="anchor-link">Integration options</a></li>
+<li><a href="#track-changes-in-your-code-across-versions" class="anchor-link">Track changes in your code across versions</a></li>
+<li><a href="#showcase-your-work" class="anchor-link">Showcase your work</a></li>
+</ul>
+</li>
+<li><a href="#now-well-learn-how-to-use-git-github" class="anchor-link">Now we’ll learn how to use Git &amp; GitHub</a><ul>
+<li><a href="#github-account-creation" class="anchor-link">GitHub account creation</a></li>
+<li><a href="#git-installation" class="anchor-link">Git installation</a></li>
+</ul>
+</li>
+<li><a href="#working-with-github-projects" class="anchor-link">Working with GitHub projects</a><ul>
+<li><a href="#type-1-create-the-repository-clone-it-to-your-pc-and-work-on-it-recommended" class="anchor-link">Type 1: Create the repository, clone it to your PC, and work on it.(Recommended)</a></li>
+<li><a href="#type-2-work-on-your-project-locally-then-create-the-repository-on-github-and-push-it-to-remote" class="anchor-link">Type 2: Work on your project locally then create the repository on GitHub and push it to remote.</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Git is a free, open-source <strong>version control software</strong>. It was created by Linus Torvalds in 2005. This tool is a version control system that was initially developed to work with several developers on the Linux kernel.   </p>
+<p>This basically means that Git is a content tracker. So Git can be used to store content — and it is mostly used to store code because of the other features it provides.   </p>
+<p>Real life projects generally have multiple developers working in parallel. So they need a version control system like Git to make sure that there are no code conflicts between them.   </p>
+<p>Also, the requirements in such projects change often. So a version control system allows developers to revert and go back to an older version of their code.   </p>
+<p>The branch system in Git allows developers to work individually on a task (For example: One branch -&gt; One task OR One branch -&gt; One developer). Basically think of Git as a small software application that controls your code base, if you’re a developer.   </p>
+<p><img alt="vcs" src="https://www.freecodecamp.org/news/content/images/2019/11/vcs.png" />   </p>
+<p>Shows how Git works   </p>
+<h1 id="git-repositories"><strong>Git Repositories</strong></h1>
+<p>If we want to start using Git, we need to know where to host our repositories.   </p>
+<p>A repository (or “Repo” for short) is a project that contains multiple files. In our case a repository will contain code-based files.   </p>
+<p>There are two ways you can host your repositories. One is online (on the cloud) and the second is offline (self-installed on your server).   </p>
+<p>There are three popular Git hosting services: GitHub (owned by Microsoft), GitLab (owned by GitLab) and BitBucket. We’ll use GitHub as our hosting service.   </p>
+<h1 id="before-using-git-we-should-know-why-we-need-it"><strong>Before using Git we should know why we need it</strong></h1>
+<h3 id="git-makes-it-easy-to-contribute-to-open-source-projects">Git makes it easy to contribute to open source projects</h3>
+<p>Nearly every open-source project uses GitHub to manage their projects. Using GitHub is free if your project is open source, and it includes a wiki and issue tracker that makes it easy to include more in-depth documentation and get feedback about your project.   </p>
+<p>If you want to contribute, you just fork (get a copy of) a project, make your changes, and then send the project a pull request using GitHub's web interface. This pull request is your way of telling the project you're ready for them to review your changes.   </p>
+<h3 id="documentation">Documentation</h3>
+<p>By using GitHub, you make it easier to get excellent documentation. Their help section and guides have articles for nearly any topic related to Git that you can think of.   </p>
+<h3 id="integration-options">Integration options</h3>
+<p>GitHub can integrate with common platforms such as Amazon and Google Cloud, with services such as Code Climate to track your feedback, and can highlight syntax in over 200 different programming languages.   </p>
+<h3 id="track-changes-in-your-code-across-versions">Track changes in your code across versions</h3>
+<p>When multiple people collaborate on a project, it’s hard to keep track of revisions — who changed what, when, and where those files are stored.   </p>
+<p>GitHub takes care of this problem by keeping track of all the changes that have been pushed to the repository.   </p>
+<p>Much like using Microsoft Word or Google Drive, you can have a version history of your code so that previous versions are not lost with every iteration. It’s easy to come back to the previous version and contribute your work.   </p>
+<h3 id="showcase-your-work">Showcase your work</h3>
+<p>Are you a developer who wishes to attract recruiters? GitHub is the best tool you can rely on for this.   </p>
+<p>Today, when searching for new recruits for their projects, most companies look at GitHub profiles. If your profile is available, you will have a higher chance of being recruited even if you are not from a great university or college.   </p>
+<h1 id="now-well-learn-how-to-use-git-github"><strong>Now we’ll learn how to use Git &amp; GitHub</strong></h1>
+<h3 id="github-account-creation">GitHub account creation</h3>
+<p>To create your account, you need to go to <a href="https://github.com/" target="_blank" class="external-link">GitHub</a>'s website and fill out the registration form.   </p>
+<p><img alt="github-webpage" src="https://www.freecodecamp.org/news/content/images/2019/11/github-webpage.png" />   </p>
+<p>GitHub official web page   </p>
+<h3 id="git-installation">Git installation</h3>
+<p>Now we need to install Git's tools on our computer. We’ll use CLI to communicate with GitHub.   </p>
+<p>For Ubuntu:   </p>
+<ol>
+<li>First, update your packages.   </li>
+</ol>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt update
+</code></pre></div>
+
+
+</div>
+
+<ol>
+<li>Next, install Git and GitHub with apt-get   </li>
+</ol>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sudo apt-get install git
+</code></pre></div>
+
+
+</div>
+
+<ol>
+<li>Finally, verify that Git is installed correctly   </li>
+</ol>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git --version
+</code></pre></div>
+
+
+</div>
+
+<ol>
+<li>Run the following commands with your information to set a default username and email when you’re going to save your work.   </li>
+</ol>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">--</span><span class="k">global</span><span class="w"> </span><span class="k">user</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="ss">&quot;MV Thanoshan&quot;</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--global user.email &quot;example@mail.com&quot;</span>
+</code></pre></div>
+
+
+</div>
+
+<h1 id="working-with-github-projects"><strong>Working with GitHub projects</strong></h1>
+<p>We’ll work with GitHub projects in two ways.   </p>
+<h3 id="type-1-create-the-repository-clone-it-to-your-pc-and-work-on-it-recommended">Type 1: Create the repository, clone it to your PC, and work on it.(Recommended)</h3>
+<p>Type 1 involves creating a totally fresh repository on GitHub, cloning it to our computer, working on our project, and pushing it back.   </p>
+<p>Create a new repository by clicking the “new repository” button on the GitHub web page.   </p>
+<p><img alt="new-repo" src="https://www.freecodecamp.org/news/content/images/2019/11/new-repo.png" />   </p>
+<p>Pick a name for your first repository, add a small description, check the ‘Initialize this repository with a README’ box, and click on the “Create repository” button.   </p>
+<p><img alt="readme" src="https://www.freecodecamp.org/news/content/images/2019/11/readme.png" />   </p>
+<p>Well done! Your first GitHub repository is created.   </p>
+<p>Your first mission is to get a copy of the repository on your computer. To do that, you need to “clone” the repository on your computer.   </p>
+<p>To clone a repository means that you're taking a repository that’s on the server and cloning it to your computer – just like downloading it. On the repository page, you need to get the “HTTPS” address.   </p>
+<p><img alt="github-project" src="https://www.freecodecamp.org/news/content/images/2019/11/github-project.png" />   </p>
+<p>Once you have the address of the repository, you need to use your terminal. Use the following command on your terminal. When you’re ready you can enter this:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="p">[</span><span class="n">HTTPS</span><span class="w"> </span><span class="n">ADDRESS</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>This command will make a local copy of the repository hosted at the given address.   </p>
+<p><img alt="cmd-1" src="https://www.freecodecamp.org/news/content/images/2019/11/cmd-1.png" />   </p>
+<p>Output message of “git clone” command   </p>
+<p>Now, your repository is on your computer. You need to move in it with the following command.   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>cd [NAME OF REPOSITORY]
+</code></pre></div>
+
+
+</div>
+
+<p><img alt="cmd-2" src="https://www.freecodecamp.org/news/content/images/2019/11/cmd-2.png" />   </p>
+<p>As you can see in the above picture, my repository name is “My-GitHub-Project” and this command made me go to that specific directory.   </p>
+<p><strong>NOTE:</strong> When you clone, Git will create a repository on your computer. If you want, you can access your project with the computer user interface instead using the above ‘cd’ command on the terminal.   </p>
+<p>Now, in that folder we can create files, work on them, and save them locally. To save them in a remote place — like GitHub – we have do a process called a “commit”. To do this, get back to your terminal. If you closed it, like I previously stated, use the ‘cd’ command.   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>cd [NAME OF REPOSITORY]
+</code></pre></div>
+
+
+</div>
+
+<p>Now, in the terminal, you’re in your repository directory. There are 4 steps in a commit: ‘status’ , ‘add’ , ‘commit’ and ‘push’. All the following steps must be performed within your project. Let's go through them one by one.   </p>
+<ol>
+<li>“status”: The first thing you need to do is to check the files you have modified. To do this, you can type the following command to make a list of changes appear.   </li>
+</ol>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git status
+</code></pre></div>
+
+
+</div>
+
+<p><img alt="git-status-1" src="https://www.freecodecamp.org/news/content/images/2019/11/git-status-1.png" />   </p>
+<ol>
+<li>“add”: With the help of the change list, you can add all files you want to upload with the following command,   </li>
+</ol>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="o">[</span><span class="n">FILENAME</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">FILENAME</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">...</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>In our case, we’ll add a simple HTML file.   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git add sample.html
+</code></pre></div>
+
+
+</div>
+
+<p><img alt="sample" src="https://www.freecodecamp.org/news/content/images/2019/11/sample.png" />   </p>
+<ol>
+<li>“commit”: Now that we have added the files of our choice, we need to write a message to explain what we have done. This message may be useful later if we want to check the change history. Here is an example of what we can put in our case.   </li>
+</ol>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git commit -m &quot;Added sample HTML file that contain basic syntax&quot;
+</code></pre></div>
+
+
+</div>
+
+<p><img alt="commit-1" src="https://www.freecodecamp.org/news/content/images/2019/11/commit-1.png" />   </p>
+<ol>
+<li>“push”: Now we can put our work on GitHub. To do that we have to ‘push’ our files to Remote. Remote is a duplicate instance of our repository that lives somewhere else on a remote server. To do this, we must know the remote’s name (Mostly remote is named origin). To figure out that name, type the following command.   </li>
+</ol>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git remote
+</code></pre></div>
+
+
+</div>
+
+<p><img alt="remote-1" src="https://www.freecodecamp.org/news/content/images/2019/11/remote-1.png" />   </p>
+<p>As you can see in the above image, it says that our remote’s name is origin. Now we can safely ‘push’ our work by the following command.   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git push origin master
+</code></pre></div>
+
+
+</div>
+
+<p>Now, if we go to our repository on the GitHub web page, we can see the sample.html file that we’ve pushed to remote — GitHub!   </p>
+<p><img alt="push-1" src="https://www.freecodecamp.org/news/content/images/2019/11/push-1.png" />   </p>
+<p><strong>NOTE</strong>: Sometimes when you’re using Git commands in the terminal, it can lead you to the VIM text editor (a CLI based text-editor). So to get rid of it, you have to type   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>:q
+</code></pre></div>
+
+
+</div>
+
+<p>and ENTER.   </p>
+<p><img alt="-q" src="https://www.freecodecamp.org/news/content/images/2019/11/-q.png" />   </p>
+<p><img alt="explanation" src="https://www.freecodecamp.org/news/content/images/2019/11/explanation.png" />   </p>
+<p>Describes how pull &amp; push work   </p>
+<p>Pulling is the act of receiving from GitHub.   </p>
+<p>Pushing is the act of sending to GitHub.   </p>
+<h3 id="type-2-work-on-your-project-locally-then-create-the-repository-on-github-and-push-it-to-remote">Type 2: Work on your project locally then create the repository on GitHub and push it to remote.</h3>
+<p>Type 2 lets you make a fresh repository from an existing folder on our computer and send that to GitHub. In a lot of cases you might have actually already made something on your computer that you want to suddenly turn into a repository on GitHub.   </p>
+<p>I will explain this to you with a Survey form web project that I made earlier that wasn’t added to GitHub.   </p>
+<p>As I already mentioned, when executing any Git commands, we have to make sure that we are in the correct directory in the terminal.   </p>
+<p><img alt="type-2" src="https://www.freecodecamp.org/news/content/images/2019/11/type-2.png" />   </p>
+<p>By default, any directory on our computer is not a Git repository – but we can turn it into a Git repository by executing the following command in the terminal.   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git init
+</code></pre></div>
+
+
+</div>
+
+<p><img alt="init" src="https://www.freecodecamp.org/news/content/images/2019/11/init.png" />   </p>
+<p>After converting our directory to a Git repository, the first thing we need to do is to check the files we have by using the following command.   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git status
+</code></pre></div>
+
+
+</div>
+
+<p><img alt="status-2" src="https://www.freecodecamp.org/news/content/images/2019/11/status-2.png" />   </p>
+<p>So there are two files in that directory that we need to “add” to our Repo.   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="o">[</span><span class="n">FILENAME</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">FILENAME</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">...</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p><strong>NOTE</strong>: To “add” all of the files in our Repository we can use the following command:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git add .
+</code></pre></div>
+
+
+</div>
+
+<p>After the staging area (the add process) is complete, we can check whether the files are successfully added or not by executing the <code>git status</code>   </p>
+<p>If those particular files are in green like the below picture, you’ve done your work!   </p>
+<p><img alt="green" src="https://www.freecodecamp.org/news/content/images/2019/11/green.png" />   </p>
+<p>Then we have to “commit” with a description in it.   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git commit -m &quot;Adding web Survey form&quot;
+</code></pre></div>
+
+
+</div>
+
+<p><img alt="survey-form" src="https://www.freecodecamp.org/news/content/images/2019/11/survey-form.png" />   </p>
+<p>If my repository started on GitHub and I brought it down to my computer, a remote is already going to be attached to it (Type 1). But if I’m starting my repository on my computer, it doesn’t have a remote associated with it, so I need to add that remote (Type 2).   </p>
+<p>So to add that remote, we have to go to GitHub first. Create a new repository and name it whatever you want to store it in GitHub. Then click the “Create repository” button.   </p>
+<p><strong>NOTE</strong>: In Type 2, Please don’t initialize the repository with a README file when creating a new repository on the GitHub web page.   </p>
+<p><img alt="new-repo-2" src="https://www.freecodecamp.org/news/content/images/2019/11/new-repo-2.png" />   </p>
+<p>After clicking the “Create repository” button you’ll find the below image as a web page.   </p>
+<p><img alt="web-page" src="https://www.freecodecamp.org/news/content/images/2019/11/web-page.png" />   </p>
+<p>Copy the HTTPS address. Now we’ll create the remote for our repository.   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="p">[</span><span class="n">HTTPS</span><span class="w"> </span><span class="n">ADDRESS</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>After executing this command, we can check whether we have successfully added the remote or not by the following command   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git remote
+</code></pre></div>
+
+
+</div>
+
+<p>And if it outputs “origin” you’ve added the remote to your project.   </p>
+<p><strong>NOTE</strong>: Just remember we can state any name for the remote by changing the name “origin”. For example:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="p">[</span><span class="n">REMOTE</span><span class="w"> </span><span class="n">NAME</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="n">HTTPS</span><span class="w"> </span><span class="n">ADDRESS</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>Now, we can push our project to GitHub without any problems!   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>git push origin master
+</code></pre></div>
+
+
+</div>
+
+<p>After completing these steps one by one, if you go to GitHub you can find your repository with the files!   </p>
+<p><img alt="final" src="https://www.freecodecamp.org/news/content/images/2019/11/final.png" /></p>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/02 Areas/DEVOPS.html">devops</a></li>
+</ul>
+</div>
+
+<div class="tags">
+
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A140253407752810473562925776653188204539{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B140253407752810473562925776653188204539{level}" level="{level}" note_temp_id="140253407752810473562925776653188204539" onclick="window.ObsHtmlGraph.run(this, '140253407752810473562925776653188204539', 'git&github');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C140253407752810473562925776653188204539{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+                                <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+                                <div id="right_pane_content" class="right_pane_content">
+                                        <button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">01 Projects</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/01 Projects">
+	<ul class="dir-list">
+		<li><a class="" href="/01 Projects/01 Projects.html"  >01 Projects</a></li>
+		<li><a class="" href="/01 Projects/Learn Microsoft Excel.html"  >Learn Microsoft Excel</a></li>
+		<li><a class="" href="/01 Projects/Workout plan for the next 6 months.html"  >Workout plan for the next 6 months</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">02 Areas</button>
+<div id="folder-container-2" class="dir-container requires_js active" path="/02 Areas">
+	<ul class="dir-list">
+		<li><a class="" href="/02 Areas/02 Areas.html"  >02 Areas</a></li>
+		<li><a class="" href="/02 Areas/ANSIBLE.html"  >ANSIBLE</a></li>
+		<li><a class="" href="/02 Areas/DEVOPS.html"  >DEVOPS</a></li>
+		<li><a class="" href="/02 Areas/Docker and DockerHub.html"  >Docker and DockerHub</a></li>
+		<li><a class="active" href="/02 Areas/GIT&GITHUB.html"  >GIT&GITHUB</a></li>
+		<li><a class="" href="/02 Areas/Health.html"  >Health</a></li>
+		<li><a class="" href="/02 Areas/IIS SETUP WITH PUPPET.html"  >IIS SETUP WITH PUPPET</a></li>
+		<li><a class="" href="/02 Areas/JENKINS.html"  >JENKINS</a></li>
+		<li><a class="" href="/02 Areas/KALI-LINUX.html"  >KALI-LINUX</a></li>
+		<li><a class="" href="/02 Areas/KUBERNETS.html"  >KUBERNETS</a></li>
+		<li><a class="" href="/02 Areas/PKM.html"  >PKM</a></li>
+		<li><a class="" href="/02 Areas/PUPPET.html"  >PUPPET</a></li>
+		<li><a class="" href="/02 Areas/RUBYonRAILS.html"  >RUBYonRAILS</a></li>
+		<li><a class="" href="/02 Areas/SERVICENOW.html"  >SERVICENOW</a></li>
+		<li><a class="" href="/02 Areas/Skepticism.html"  >Skepticism</a></li>
+		<li><a class="" href="/02 Areas/TERRAFORM.html"  >TERRAFORM</a></li>
+		<li><a class="" href="/02 Areas/WCF.html"  >WCF</a></li>
+	</ul>
+</div>
+<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">03 Resources</button>
+<div id="folder-container-3" class="dir-container requires_js " path="/03 Resources">
+	<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Articles</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="/03 Resources/Articles">
+		<ul class="dir-list">
+			<li><a class="" href="/03 Resources/Articles/50 Skeptic Concepts from “The Skeptics’ Guide to the Universe” by Steven Novella (Book Summary).html"  >50 Skeptic Concepts from “The Skeptics’ Guide to the Universe” by Steven Novella (Book Summary)</a></li>
+			<li><a class="" href="/03 Resources/Articles/Articles.html"  >Articles</a></li>
+			<li><a class="" href="/03 Resources/Articles/Building a Second Brain Summary.html"  >Building a Second Brain Summary</a></li>
+			<li><a class="" href="/03 Resources/Articles/Tiago Forte (@fortelabs).html"  >Tiago Forte (@fortelabs)</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Books</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="/03 Resources/Books">
+		<ul class="dir-list">
+			<li><a class="" href="/03 Resources/Books/Books.html"  >Books</a></li>
+			<li><a class="" href="/03 Resources/Books/Building a Second Brain.html"  >Building a Second Brain</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">Podcasts</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="/03 Resources/Podcasts">
+		<ul class="dir-list">
+			<li><a class="" href="/03 Resources/Podcasts/Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97.html"  >Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97</a></li>
+			<li><a class="" href="/03 Resources/Podcasts/Podcasts.html"  >Podcasts</a></li>
+			<li><a class="" href="/03 Resources/Podcasts/Show 68 - BLITZ Human Resources.html"  >Show 68 - BLITZ Human Resources</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/03 Resources/03 Resources.html"  >03 Resources</a></li>
+	</ul>
+</div>
+<button id="folder-7" class="dir-button" onclick="toggle_dir(this.id)">04 Archive</button>
+<div id="folder-container-7" class="dir-container requires_js " path="/04 Archive">
+	<ul class="dir-list">
+		<li><a class="" href="/04 Archive/04 Archive.html"  >04 Archive</a></li>
+		<li><a class="" href="/04 Archive/Evergreen Notes.html"  >Evergreen Notes</a></li>
+		<li><a class="" href="/04 Archive/like this.html"  >like this</a></li>
+	</ul>
+</div>
+<button id="folder-8" class="dir-button" onclick="toggle_dir(this.id)">05 Inbox</button>
+<div id="folder-container-8" class="dir-container requires_js " path="/05 Inbox">
+	<ul class="dir-list">
+		<li><a class="" href="/05 Inbox/05 Inbox.html"  >05 Inbox</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/Untitled.html"  >Untitled</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+	<li><a class="" href="/markdown-cheat-sheet.html"  >markdown-cheat-sheet</a></li>
+</ul>
+
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        localStorage.setItem('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = localStorage.getItem('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

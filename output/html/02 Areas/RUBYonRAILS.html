@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="rubyonrails">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Wiki</title>
+
+                <!-- Includes -->
+                
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'rubyonrails';
+                        const HTML_URL_PREFIX = '';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+                        <div id="header_flex" class="flex_row">
+                                <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Wiki</a>
+                                <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                                        ≡
+                                </div>
+                                <div id="navbar" class="navbar requires_js">
+                                        
+                                        <div class="icon-tray">
+                                                <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                                        <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                                        <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=rubyonrails" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                                        <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                                                <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                                                
+                                        </div>
+                                        <div style="display: flex; flex-direction:column">
+                                                <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                                                <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+                </div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+                                <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+                                <div id="left_pane_content" class="left_pane_content">
+                                        
+                                </div>
+                        </div>
+                        <div class="container">
+                                
+                    <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
+                        <div style="flex:1;display: none;"></div>
+                        <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
+                            <a href="/" style="color: rgb(var(--normal-text-color));">Home</a> / <a href="/02 Areas/02 Areas.html" style="color: var(--normal-text-color);">02 Areas</a> / <a href="/02 Areas/RUBYonRAILS.html" >RUBYonRAILS</a>
+                        </div>
+                    </div>
+<div class="toc">
+<ul>
+<li><a href="#what-is-ruby" class="anchor-link">What is Ruby?</a></li>
+<li><a href="#_1" class="anchor-link"></a></li>
+<li><a href="#installing-prerequisites" class="anchor-link">Installing Prerequisites</a></li>
+<li><a href="#installing-ruby" class="anchor-link">Installing Ruby</a></li>
+<li><a href="#installing-ruby-on-windows" class="anchor-link">Installing Ruby on Windows</a></li>
+<li><a href="#installing-ruby-on-a-mac" class="anchor-link">Installing Ruby on a Mac</a></li>
+<li><a href="#installing-sqlite3" class="anchor-link">Installing SQLite3</a></li>
+<li><a href="#installing-node-js-and-yarn" class="anchor-link">Installing Node.js and Yarn</a></li>
+<li><a href="#installing-rails" class="anchor-link">Installing Rails</a></li>
+<li><a href="#getting-started-with-our-application" class="anchor-link">Getting Started With our Application</a></li>
+<li><a href="#what-did-rails-create-for-us" class="anchor-link">What Did Rails Create For Us?</a></li>
+<li><a href="#building-our-resource" class="anchor-link">Building our “Resource”</a></li>
+<li><a href="#next-steps" class="anchor-link">Next Steps</a></li>
+<li><a href="#wrapping-up" class="anchor-link">Wrapping Up</a></li>
+</ul>
+</div>
+<p>RUBY   </p>
+<h4 id="what-is-ruby"><strong>What is Ruby?</strong></h4>
+<p>If you are new to Ruby on Rails, it is important to first know what Ruby is, so what is Ruby? Ruby is an object oriented programming language based on another popular programming language, C. Introduced in the early ’90s by a Japanese programmer named Yukihiro “Matz” Matsumoto, Ruby was created “to make programmers happy”. How does Ruby achieve this goal? Ruby makes programmers happy by being a programming language that is read and is written like plain English.   </p>
+<p>Other than being the foundation for Rails, why bother learning Ruby? First and foremost, because Ruby is written and read like English, the learning curve for Ruby is much lower than with other programming languages. Beyond the fact that Ruby is quick and easy to learn, it is object oriented, offers lots of powerful tooling, and has a huge, supportive open-source community backing it.   </p>
+<h4 id="_1"></h4>
+<p><strong>What is Rails?</strong>   </p>
+<p>Rails is an open-source web application framework for rapidly developing database-backed web applications. In other words, Rails is a tool that allows anyone to quickly build out powerful web applications with minimal effort as compared to other similar tools. To give you an idea of how powerful a tool Rails is, we will list a few of the many well-known web applications that are built on Rails. This star-studded list includes Airbnb, Shopify, SoundCloud, Hulu, Twitch, and Square.   </p>
+<p>A slightly more technical explanation of Rails would be that Rails is a web framework for Ruby which uses Ruby on both the front and back end to communicate with the database and displays data to users. In order to pass information back and forth between the users and the database, Rails uses what is known as the “Model, View, Controller” or MVC style of organization. While Rails was not the absolute first MVC framework, it is one of the first popular implementations of this organizational method and many give it credit for popularizing this method of structuring web applications. MVC application structure is now conventional in almost all web application frameworks meaning that there is no better place to start developing for the web than with Rails.   </p>
+<p>While all this talk of databases, models, views, and controllers may seem confusing at first, the best way to understand these topics is to see them first hand, so let’s get to it! Next up, we will set up your computer with the prerequisites required to run Ruby and Rails and jump right into building your first Rails application.     </p>
+<h4 id="installing-prerequisites"><strong>Installing Prerequisites</strong></h4>
+<p>In order to use the latest version of Rails (Rails 6), you need to have several other tools installed on your computer. These tools are:   </p>
+<ul>
+<li>Ruby (the programming language that will oversee the logic of your application)   </li>
+<li>SQLite3 (a database engine for storing all your application’s data)   </li>
+<li>Node.js (an engine for running your application’s JavaScript)   </li>
+<li>Yarn (a package manager to manage your application’s JavaScript)   </li>
+</ul>
+<p>The most involved of all these installations will be Ruby, so we will cover that in depth first. The other three installations should be relatively straightforward and we will link out to their respective installation instructions provided by their creators.   </p>
+<h4 id="installing-ruby"><strong>Installing Ruby</strong></h4>
+<p>If you don’t already have Ruby installed on your computer or if your Ruby version is less than 2.5.0, this is the first step in the process of getting going with Rails. Some of you may already have Ruby installed or may be unsure if you do or don’t, so before we start the installation, let’s check and see if this is the case.   </p>
+<p>The first step to checking if Ruby is installed on your computer is to pull up your terminal. For Mac users, you will open up the application called “Terminal”, for Windows users, your terminal application is called “Command Prompt”. On both types of systems, the terminal application is installed by default and you can find it by searching your computer.   </p>
+<p>If this is your first time using the terminal, congratulations, you are now a real programmer. We will be using the terminal for the duration of this tutorial so you can leave it open for now. For those of you who are new to the terminal, the basic pattern for using the terminal is as follows:   </p>
+<ol>
+<li>
+<p>Type in a “command”   </p>
+</li>
+<li>
+<p>Press enter to “run the command”   </p>
+</li>
+<li>
+<p>See what the “return” or “output” of the command is   </p>
+</li>
+</ol>
+<p>Once your terminal is open, type in the following command and then press enter:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>ruby -v
+</code></pre></div>
+
+
+</div>
+
+<p>This command should return the version of Ruby that you have installed on your computer as is depicted in the screenshot below. If the number printed is less than 2.5.0, you will need to continue with this section and install the latest version of Ruby (2.7.1 at the date of publication). If the number is greater than 2.5.0, you can skip ahead to installing Rails.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-1.jpg" />   </p>
+<p>If your computer doesn’t have Ruby on it at all or if the version is less than 2.5.0, you’ll need to install the latest version. This step will be different for Mac and Windows users and the instructions for both operating systems are outlined below.   </p>
+<h4 id="installing-ruby-on-windows"><strong>Installing Ruby on Windows</strong></h4>
+<p>If you are using Windows, this step is going to be easier for you than for your Mac using counterparts. All Windows users will need to do is visit <a href="https://rubyinstaller.org/" target="_blank" class="external-link">https://rubyinstaller.org/</a> and click the big red “Download” button that is close to the top of the homepage.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-2.jpg" />   </p>
+<p>This will download a .exe file which will walk you through the Ruby installation by clicking through a graphical installation process. It is recommended that you leave the default settings as they are and simply click through this installation.   </p>
+<p>Once the installation is complete, close and re-open your command prompt and execute the same command from before:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>ruby -v
+</code></pre></div>
+
+
+</div>
+
+<p>This should now return:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>ruby 2.7.1
+</code></pre></div>
+
+
+</div>
+
+<p>There will also be some characters after that, but so long as the returned output begins with ruby 2.7.1, you are in the clear and can carry on to installing other prerequisites.   </p>
+<h4 id="installing-ruby-on-a-mac"><strong>Installing Ruby on a Mac</strong></h4>
+<p>Mac users, this step can be difficult, so be patient with yourself and try to work through errors if they come up by copying and pasting them into Google.   </p>
+<p>With that said, installing Ruby on a Mac requires that you install what is known as RVM or the Ruby Version Manager. The RVM is a set of command-line tools that allow you to have multiple versions of Ruby installed and switch between them. RVM is an incredibly useful tool and will come in handy down the line, so it is great that you are starting your Ruby career by familiarizing yourself with this tool. The downside to this way of installing Ruby is that you will need to install it via the command line which can be intimidating if this is new to you.   </p>
+<p>With your terminal open, the first step is to enter and execute the following command:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+</code></pre></div>
+
+
+</div>
+
+<p>This command tells your computer that you trust the RVM installer and that it is safe to allow it to modify your computer.   </p>
+<p>Next, you can install RVM and the latest stable version of Ruby by running the following command:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>\curl -sSL https://get.rvm.io | bash -s stable --ruby
+</code></pre></div>
+
+
+</div>
+
+<p>This may take several minutes to execute, but you will know it is done when your terminal shows the $ with a blinking cursor again. Once your cursor returns, you can then run the following command:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>ruby -v
+</code></pre></div>
+
+
+</div>
+
+<p>This should now return:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>ruby 2.7.1
+</code></pre></div>
+
+
+</div>
+
+<p>There will also be some characters after that, but so long as the returned output begins with ruby 2.7.1, you are in the clear and can carry on to installing Rails.   </p>
+<p>If you run into trouble with this step, check out the official RVM installation documentation here: <a href="https://rvm.io/rvm/install" target="_blank" class="external-link">https://rvm.io/rvm/install</a>.   </p>
+<h4 id="installing-sqlite3"><strong>Installing SQLite3</strong></h4>
+<p>Many computers come with SQLite3 installed by default. You can check if this is the case for you by running the following command in your terminal:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>sqlite3 –version
+</code></pre></div>
+
+
+</div>
+
+<p>This should return:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="mf">3.32.3</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>or some other variation that starts with a 3 such as:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="mf">3.28.0</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>This number will be followed by some other characters, but so long as it starts with a 3, you have SQLite3 installed. If this command does not return your SQLite3 version, you will need to download and install SQLite3 by visiting <a href="https://www.sqlite.org/download.html" target="_blank" class="external-link">https://www.sqlite.org/download.html</a> and download/install the latest precompiled binaries for your operating system. To do this, you will need to click the appropriate one of the following three links (depicted in the screenshot below) based on your system.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-3.jpg" />   </p>
+<p>Once downloaded, simply click through the installation and you will be ready to use SQLite3.   </p>
+<h4 id="installing-node-js-and-yarn"><strong>Installing Node.js and Yarn</strong></h4>
+<p>Because the latest version of Rails (Rails 6) relies heavily on JavaScript behind the scenes, these two tools are now required to use Rails. You will need to install Node first and can do so by downloading the installer for your operating system here: <a href="https://nodejs.org/en/download/" target="_blank" class="external-link">https://nodejs.org/en/download/</a> once downloaded, you can click through the installation to install Node.   </p>
+<p>Once installed, you can run the following command to make sure Node installed correctly:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>node –version
+</code></pre></div>
+
+
+</div>
+
+<p>This should return:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>v12.18.2
+</code></pre></div>
+
+
+</div>
+
+<p>Or something similar. All that matters is that the number is 8.16.0 or above.   </p>
+<p>Yarn is a bit more tricky, but it still shouldn’t be too bad. You can find the installation instructions for Yarn on their website here: <a href="https://classic.yarnpkg.com/en/docs/install" target="_blank" class="external-link">https://classic.yarnpkg.com/en/docs/install</a>   </p>
+<p>Yarn’s website will detect what operating system you are using and walk you through the appropriate installation instructions.   </p>
+<p>Once installed, you can run the following command to make sure that Yarn is installed correctly:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>yarn -v
+</code></pre></div>
+
+
+</div>
+
+<p>This will return   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="mf">1.22.0</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>or something similar.   </p>
+<h4 id="installing-rails"><strong>Installing Rails</strong></h4>
+<p>Once you have a version of Ruby installed on your computer that is 2.5.0 or above, along with SQLite3, Node.js, and Yarn, you are ready to install Rails!   </p>
+<p>Installing Rails is incredibly easy because it is a Ruby “Gem”. If you are familiar with WordPress plugins, Gems are the Ruby version of this concept. Basically, Gems are prepackaged code that you can install and use with little or no configuration. With Ruby installed, you can install Gems via the command line.   </p>
+<p>To install the Rails Gem, all you will need to do is execute the following command:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>gem install rails
+</code></pre></div>
+
+
+</div>
+
+<p>Running this command will then put Ruby to work fetching and installing all of the dependencies that Rails requires to run. This process is resource intensive and will probably take 3-10min depending on how powerful your computer is and how fast your internet is. Once the installation is complete, your terminal window should look something like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-4.jpg" />   </p>
+<p>Once Rails is done installing, you can double check that the installation went as expected by running the following command in your terminal:     </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>rails –version
+</code></pre></div>
+
+
+</div>
+
+<p>The output should be:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>Rails 6.0.3.2
+</code></pre></div>
+
+
+</div>
+
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-5.jpg" />   </p>
+<p>The numbers after the 6 may be different for you, but as long as the first number is a 6, you have successfully installed the latest version of Rails!   </p>
+<p>With Rails and all of its prerequisites installed, it’s time to move on to the fun part of this tutorial, building your first rails application!   </p>
+<h4 id="getting-started-with-our-application"><strong>Getting Started With our Application</strong></h4>
+<p>Congrats! Believe it or not, if you have made it this far, you are past the hard part. Configuring your computer to start coding is significantly harder than building a simple Rails application. It is also much less rewarding. This part should be fun.   </p>
+<p>As already mentioned, we will be building a blog. Why build a blog? We will build a blog because all other applications are basically blogs with a few extra features (Facebook, Craigslist, Wikipedia, etc..) when it comes down to it. This means that once you know how to build a blog, you will be able to use this foundation to build more complex applications.   </p>
+<p>That said, before we start building, there is one other strongly recommended prerequisite before we get going and this is a code editor. While you can edit code using a plain old text editor (code is just text after all), code editors are text editors that add color to code to make patterns more recognizable and code easier to read. The code editor that will be shown in this demonstration is Sublime. Other popular free editors are Atom and VS Code. Here are links to download those editors:   </p>
+<ul>
+<li>Sublime: <a href="https://www.sublimetext.com/3" target="_blank" class="external-link">https://www.sublimetext.com/3</a>   </li>
+<li>Atom: <a href="https://atom.io/" target="_blank" class="external-link">https://atom.io/</a>   </li>
+<li>VS Code: <a href="https://code.visualstudio.com/Download" target="_blank" class="external-link">https://code.visualstudio.com/Download</a>   </li>
+</ul>
+<p>If you are unsure which one to use, sticking with Sublime might be wise just to be in sync with the screenshots in this tutorial. Once you have downloaded and installed one of these (or perhaps another one that seems to be the best fit for you), we can start writing some code!   </p>
+<p>To lay the foundation for our Rails app, we will use the “rails new” command followed by the name of our application. This command will generate a new folder with the name of our application which will contain several other files and folders generated by Rails.   </p>
+<p>Before running the “rails new” command, it is recommended that you create a folder that will contain all of your Rails apps. For us, this folder is simply a folder on the desktop with the creative title of “rails_apps”. You can name it and place it wherever it feels easiest for you to access.   </p>
+<p>Once you have a folder for your Rails apps, go ahead and open up that folder in your terminal by either navigating to it via the command line or by opening it up in another way that you feel more comfortable with. If you are still becoming familiar with the terminal, here is an article with 10 ways to open the command prompt on Windows:   </p>
+<p><a href="https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/" target="_blank" class="external-link">https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/</a>   </p>
+<p>And here is a similar article for Mac users:   </p>
+<blockquote>
+<p><a href="https://www.maketecheasier.com/open-folder-in-finder-from-mac-terminal/" target="_blank" class="external-link">How to Open Any Folder from the Mac Terminal</a>   </p>
+</blockquote>
+<p>If you are on a Mac, you can also just drag the folder over the terminal application and the terminal app will open to that folder.   </p>
+<p>Once you are in the folder where you want your Rails app to live, you can run the following command to create your Rails app:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>rails new bionic_blog
+</code></pre></div>
+
+
+</div>
+
+<p>Much like installing Rails, this command will take a while to run because it is downloading and installing dependencies while also building and creating the foundation for your Rails app. While you wait, we will give a brief explanation of that command.   </p>
+<p>First up in this three-word command is the word “rails”. This portion of the command tells your computer that the following words in the command will be commands related to Rails. The next word is “new” this says that you want to create a new Rails application. Finally, the third portion of this command is the name of the application. In this case, our application will be called “bionic_blog”. We could have called it “blog” or “bashful_blog”, but bionic just sounded more exciting.   </p>
+<p>The only important piece to remember when naming your application is to keep your name to one string of characters. If you include spaces in the name of your application, Rails will get confused. Seeing as our application has a multi-word title, we separated the two words with underscores as this is the convention within Ruby. Convention means that naming things this way isn’t required, but it is strongly recommended.   </p>
+<p>At this point, your Rails application is probably still building itself and you are seeing a bunch of green text stream across your terminal. Once it is done, the cursor will return to your terminal and your terminal should look something like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-6.jpg" />   </p>
+<h4 id="what-did-rails-create-for-us"><strong>What Did Rails Create For Us?</strong></h4>
+<p>Once your Rails app has been created successfully run the following command to move into the folder containing the contents of your new Rails application:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>cd bionic_blog
+</code></pre></div>
+
+
+</div>
+
+<p>The command “cd” stands for “change directory” which is just another way to say change folder (directory and folder are synonymous) and is followed by the directory we want to change into. Once this command is run, you can verify that you are inside the directory with the contents of your Rails app by running the following command on Windows:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>dir
+</code></pre></div>
+
+
+</div>
+
+<p>or, if you are on a Mac, the command is:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>ls
+</code></pre></div>
+
+
+</div>
+
+<p>This command will list off all the files and folders within the current directory (in this case, our Rails app). The output should look something like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-7.jpg" />   </p>
+<p>If that is what this command returns for you, you are on the right track and you can open up your Rails application in your code editor of choice. All code editors can be configured to be opened from the command line and this is recommended. To figure out how to set up this shortcut on your machine, simply Google “how to open a folder in <strong>_the name of your code editor here</strong><em> _via the command line on</em> <em><strong>the name of your operating system here</strong>”</em> and you will be able to find instructions on how to set up this shortcut.   </p>
+<p>You can also open your code editor and go with the classic “file &gt; open” and find the name of your Rails app via the graphical interface if that is more your speed.   </p>
+<p>Either way, you should now have your Rails app open in your code editor and can start exploring all the files that Rails just created for you. There are a lot of files to explore, so here is a quick rundown of all the important folders and files that you will find.   </p>
+<p><strong>app/</strong>– This folder contains the controllers, models, views, helpers, mailers, channels, jobs, and assets for your application. This is where most of the coding happens.   </p>
+<p><strong>bin/</strong>– This folder contains the scripts related to starting, deploying, updating, and running your application. Feel free to look over the contents of this folder, but don’t edit anything here as it could cause some serious trouble down the road.   </p>
+<p><strong>config/</strong>– This folder contains all the files related to configuring your application’s routes, databases, and more. The only file in here that we will touch is routes.rb, other than that, we won’t pay this folder much attention.   </p>
+<p><strong>config.ru</strong>– This file contains configuration information for the rack-based servers used to start the application. It is best to leave this untouched unless you know what you’re doing.   </p>
+<p><strong>db/</strong>– This folder contains your current database schema as well as the database migrations. We will run a Rails command that will modify the contents of this folder, but rarely will you ever need to modify the contents of this folder by hand.   </p>
+<p><strong>Gemfile, Gemfile.lock</strong>– These files allow you to add “Gems” (kind of like plugins, remember?) to your Rails application.   </p>
+<p><strong>lib/</strong>– This folder contains extended modules for your application. Not much to see here.   </p>
+<p><strong>log/</strong>– This folder contains the log files for your application. You shouldn’t need to do much in this folder while your application is in development, but it can be useful if something goes wrong in production.   </p>
+<p><strong>package.json</strong>– This file allows you to specify the “Yarn dependencies” for your application. These are kind of like Gems, but for the JavaScript portion of your app.   </p>
+<p><strong>public/</strong>– This folder contains all of the static files and compiled assets that are made available to the public when your app is live on the web. It is good to be aware of that, but the contents of this folder are generated automatically and you shouldn’t have to edit them.   </p>
+<p><strong>Rakefile</strong>– This file finds and loads tasks that can be run in the command line (such as “rails new”). These task definitions can be found throughout Rails. Rather than changing the Rakefile to add new tasks, you should add them to the lib/tasks directory of your application. That said, you definitely won’t need to do this for your first Rails app, but this is good to be aware of in the future.   </p>
+<p><strong>README.md</strong> – This file is made to contain all of the instructions for editing and running your application. It should provide all the information that another developer would need to make changes to your application. You can edit it accordingly.   </p>
+<p><strong>storage/</strong> – This folder contains Active Storage files for Disk Service. You won’t need to make any changes here and shouldn’t unless you know what you’re doing.   </p>
+<p><strong>test/</strong> – This folder contains all the files related to testing your rails application. Testing is a good idea and while it won’t be covered in this tutorial, it is worth familiarizing yourself with the concept.   </p>
+<p><strong>tmp/</strong> <strong>–</strong> This folder contains temporary files (like cache and pid).   </p>
+<p><strong>vendor/</strong> – This folder is a place for all third party code. Typically, it contains the code from your Gems.   </p>
+<p><strong>.gitignore</strong> – This file tells Git which files it should ignore. If you are using Git (which is recommended) it is important to add the names of any files or folders which contain private data to this file so that they don’t end up on the web.   </p>
+<p><strong>.ruby-version</strong> – This file contains the default Ruby version.   </p>
+<p>This brief tour is just scratching the surface, but hopefully it helped orient you a little bit, because it is time to start writing some code!   </p>
+<h4 id="building-our-resource"><strong>Building our “Resource”</strong></h4>
+<p>In the world of Rails, the types of data that our app works with are called “Resources” in the case of this application, we are building a blog. What kind of data does a blog display? Well, blog <em>posts</em> of course! Because of that, the resource will be creating will be called “Post” with all the attributes that blog posts have.   </p>
+<p>You may be thinking “Shouldn’t we call it ‘Posts’, we want to have more than one post, right?” This thought is normal, but try to go against your instincts here.   </p>
+<p>When creating resources, we are creating a prototype that the many different instances of this resource will adhere to. Because of this, Rails wants to know what the name of this prototype is, and what attributes it will have. For Rails to understand this, it needs to receive the name of the resource as a singular, capitalized word followed by the attributes it will have. So, let’s think about our Post resource for a moment and what attributes it will have.   </p>
+<p>At the very least, all blog posts have an author, a title, and the content of the blog. Some blog posts have more than that, but let’s keep it simple to start. We will have a Post resource with author, title, and blog_content attributes.   </p>
+<p>Part of what makes Rails great is that it makes creating resources quick and easy thanks to the “scaffolding” feature. Scaffolding creates your resource in the database, and creates Ruby “methods” in the controller for creating, reading, updating, and deleting instances of your resource. Scaffolding also creates “views” for looking at all instances of your resource, a specific, single instance of your resource, and a page to edit instances of your resource. This is part of the magic of Rails and why it is such a popular choice for rapid application development.   </p>
+<p>With that bit of information out of the way, it is time to actually scaffold our post resource. To do this, make sure you are inside of the folder containing your Rails application within your terminal and type in the following command:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>rails g scaffold Post title:string author:string blog_content:text
+</code></pre></div>
+
+
+</div>
+
+<p>This command will prepare a “Post” table for your database which will contain all of your posts and create three columns within that table for the three attributes you specified. The columns for post titles and authors are made to contain strings (short bits of text) as was specified in the command. The column for the blog_content is made to contain “text” a specific datatype for longer selections of written content. When adding attributes to Rails resources, you must specify what types of data those attributes contain (string, text, integer, etc…).   </p>
+<p>This command will also create several other files that will be listed in the output. The output of the command should look like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-8.jpg" />   </p>
+<p>Once we have created our resource, there is one final step to make it official. We have to “migrate” for the prepared database tables to be created. The command that you need to run to do this is:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>rails db:migrate
+</code></pre></div>
+
+
+</div>
+
+<p>This command will allow you to start creating instances of your resources immediately. How exciting! The output should look something like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-9.jpg" />   </p>
+<p>Now that the “Post” resource has been created and added to the database, it’s time to fire up our local server and see what we have built so far.   </p>
+<p>To start your local server you will need to run the following command:     </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>rails server
+</code></pre></div>
+
+
+</div>
+
+<p>This command will start a development server for your application which will allow you to interact with your application from a web browser on the computer that is running your server. The output of this command should look something like the screenshot below.     </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-10.jpg" />   </p>
+<p>Once your terminal informs you that your server has started successfully, you will be able to start interacting with your application by going to the URL “localhost:3000” in your web browser. Once that page loads successfully, you should see the same welcome message from Rails that is depicted below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-11.jpg" />   </p>
+<p>While it is exciting to see that the server was able to successfully start-up, we came here to see our blog, not a welcome message from Rails. It would be nice to see a page that lists all of our posts when we visit localhost:3000 and we will set it up to work that way momentarily. The good news is, even if that page isn’t hooked up to the correct URL, it does exist, so let’s go check it out.   </p>
+<p>Because we scaffolded a “Post” resource, Rails created a page and corresponding route (URL) to view all of our posts and create new posts. You can navigate to that page by going to localhost:3000/posts   </p>
+<p>This page is pretty bland right now and it also doesn’t have any posts. It should look like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-12.jpg" />   </p>
+<p>While this page could use more than a little bit of styling, all it needs to be a blog is a post on it. You can add a post by clicking the “New Post” button. This will take you to the “posts/new/” route where you will be able to create a post. It should look like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-13.jpg" />   </p>
+<p>This page could use some style too, but it is fully functional as is. Go ahead and click in the boxes to add a title, author, and some content to your post. Once your post has these attributes, you can click the “Create Post” button. This will create your post and then take you to a page containing your post. It should look like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-14.jpg" />   </p>
+<p>From this page, you can then edit your post by clicking the “edit” button, or you can go back to the page displaying all of your posts by clicking “back”. We will return to that page just to see how it looks. When you arrive, it should look like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-15.jpg" />   </p>
+<p>You will notice that you now have four buttons at your disposal, three attached to the post we just created, and one for creating new posts. The “Show” button will take you back to the page to view a single post that we were just on. Edit will allow you to edit the post. Destroy will delete the post. These three buttons will appear next to every post you create. To create more posts, you can click the “New Post” button.   </p>
+<p>At this point, you have officially created a working blog application with Rails! Congratulations! It still needs some more work though, so before we call it quits, let’s look at a couple of next steps.   </p>
+<h4 id="next-steps"><strong>Next Steps</strong></h4>
+<p>You may be surprised to discover that we have built out a full-fledged application without writing a single line of code. That said, to customize the look and feel of the blog, some coding will be required. Before we call it a day, let’s look at how to set the “Posts” page which displays all the posts as the home page and look at where you will need to go to further customize the look and feel of all of the pages.   </p>
+<p>First thing’s first, let’s hook up the “Posts” page to be the “root” page of our application. In other words, let’s set it so that when we visit localhost:3000 it routes us to our “Posts” page instead of the Rails welcome message.   </p>
+<p>To do this you will want to open up config/routes.rb or in other words, go to the config folder within your Rails app and open the file named routes.rb This file should look like the screenshot below (although the colors of the words may look different in your code editor).   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-16.jpg" />   </p>
+<p>Right now, this file contains the routes related to our posts resource (/posts, /posts_/_new, etc..) and those are created with some Rails magic with the line:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="n">resources</span><span class="w"> </span><span class="o">:</span><span class="n">posts</span><span class="w"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>The greyed out line is a comment with a link to learn more about routing. You can keep it or delete it, it doesn’t matter. It might also be beneficial to visit that link.   </p>
+<p>Either way, below the “resources :posts” line, you want to add the following block of code:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>root ‘posts#index’
+</code></pre></div>
+
+
+</div>
+
+<p>This file should now look like the screenshot below.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-17.jpg" />   </p>
+<p>Now, if you visit localhost:3000, you will see the “Posts” page that previously resided at localhost:3000/posts. Sweet! This is also a great segue into where you can customize the look and feel of this page. In the line we just added, we are telling our application that we want the root URL to take us to a page called “index” that is a child of our posts resource. This is the page that we have been referring to as our “Posts” page up to this point. In reality, that page is formally called the “Posts index page” as it contains an index of all of the posts.   </p>
+<p>To find the code that dictates how all pages relating to your posts will look, you can look in app/views/posts. You will find eight files within that folder. Five of them end in “.html.erb” and can be edited like HTML, but can also contain Ruby. The HTML is written like regular HTML and the Ruby is inside of “ruby tags” which look like   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;%=</span> <span class="n">ruby</span> <span class="n">related</span> <span class="n">to</span> <span class="n">rendering</span> <span class="n">goes</span> <span class="k">in</span> <span class="n">here</span> <span class="cp">%&gt;</span><span class="x"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>or   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;%</span> <span class="n">ruby</span> <span class="n">related</span> <span class="n">to</span> <span class="n">looping</span> <span class="ow">and</span> <span class="n">logic</span> <span class="n">goes</span> <span class="n">here</span> <span class="cp">%&gt;</span><span class="x"></span>
+</code></pre></div>
+
+
+</div>
+
+<p>Here is a list of these files, what they look like, and what pages they control:   </p>
+<p><strong>form.html.erb</strong> – This file contains the form “partial” and contains the fields for creating and editing posts. It is used on the page for creating new posts and the page for editing existing posts. The fact that it is used on multiple pages is what makes it a partial, and its partial status is denoted by the fact that the file starts with an underscore.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-18.jpg" />   </p>
+<p><strong>edit.html.erb</strong> – This page is for editing posts, it displays the title, pulls in the form partial, and contains links to show the post, or to go back to view all of the posts.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-19.jpg" />   </p>
+<p><strong>index.html.erb</strong> – This file controls how the page which displays all the posts looks. It contains a title, an HTML table element containing a loop that displays each post as a new row within that table, and a link to the “New Post” page.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-20.jpg" />   </p>
+<p><strong>new.html.erb</strong> – This page contains a title, the form partial for creating new posts, and a link back to the posts index page.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-21.jpg" />   </p>
+<p><strong>show.html.erb</strong> – This file handles how single posts are displayed. It displays all the attributes of the post within HTML paragraph tags.   </p>
+<p><img alt="" src="https://www.theblogstarter.com/wp-content/uploads/2020/07/intro-to-ruby-on-rails-22.jpg" />   </p>
+<p>To change the appearance of how those pages display, simply modify the HTML surrounding the Ruby tags which are responsible for dynamically pulling in data from the database.   </p>
+<p>You can also add some style to your pages by adding CSS ids and classes to those HTML elements and then writing CSS rules for your posts within app/assets/stylesheets/posts.scss or within the application.css file that resides in that same folder.   </p>
+<h4 id="wrapping-up"><strong>Wrapping Up</strong></h4>
+<p>All that we have done thus far completes the promised Ruby on Rails basics that we will cover in this tutorial, but there is so much more to do and learn! We didn’t even dig into the controller to see the Ruby methods responsible for pulling in our data from the database (but if you want to check that out, you can take a peek under app/controllers/posts_controller.rb).   </p>
+<p>Beyond some improvements to its appearance, there are probably some other features that this app could benefit from. Some good additions might be:   </p>
+<ul>
+<li>The ability to add comments to posts   </li>
+<li>A navigation bar/menu   </li>
+<li>A way for users to log in and create posts/manage their posts (anyone can delete/edit any post as of now)   </li>
+<li>A way to attach images to posts   </li>
+<li>An option to “subscribe for updates”   </li>
+<li>The feature you feel is important but is also missing   </li>
+</ul>
+<p>The good news is, all this is possible and more with the power of Ruby on Rails. The bad news is, we won’t be learning to do all of that today. For now though, you have created your very first Rails application and you should be proud. Great work, and see you next time!</p>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/02 Areas/DEVOPS.html">devops</a></li>
+</ul>
+</div>
+
+<div class="tags">
+
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A4888235207203521525158807250219064717{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B4888235207203521525158807250219064717{level}" level="{level}" note_temp_id="4888235207203521525158807250219064717" onclick="window.ObsHtmlGraph.run(this, '4888235207203521525158807250219064717', 'rubyonrails');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C4888235207203521525158807250219064717{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+                                <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+                                <div id="right_pane_content" class="right_pane_content">
+                                        <button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">01 Projects</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/01 Projects">
+	<ul class="dir-list">
+		<li><a class="" href="/01 Projects/01 Projects.html"  >01 Projects</a></li>
+		<li><a class="" href="/01 Projects/Learn Microsoft Excel.html"  >Learn Microsoft Excel</a></li>
+		<li><a class="" href="/01 Projects/Workout plan for the next 6 months.html"  >Workout plan for the next 6 months</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">02 Areas</button>
+<div id="folder-container-2" class="dir-container requires_js active" path="/02 Areas">
+	<ul class="dir-list">
+		<li><a class="" href="/02 Areas/02 Areas.html"  >02 Areas</a></li>
+		<li><a class="" href="/02 Areas/ANSIBLE.html"  >ANSIBLE</a></li>
+		<li><a class="" href="/02 Areas/DEVOPS.html"  >DEVOPS</a></li>
+		<li><a class="" href="/02 Areas/Docker and DockerHub.html"  >Docker and DockerHub</a></li>
+		<li><a class="" href="/02 Areas/GIT&GITHUB.html"  >GIT&GITHUB</a></li>
+		<li><a class="" href="/02 Areas/Health.html"  >Health</a></li>
+		<li><a class="" href="/02 Areas/IIS SETUP WITH PUPPET.html"  >IIS SETUP WITH PUPPET</a></li>
+		<li><a class="" href="/02 Areas/JENKINS.html"  >JENKINS</a></li>
+		<li><a class="" href="/02 Areas/KALI-LINUX.html"  >KALI-LINUX</a></li>
+		<li><a class="" href="/02 Areas/KUBERNETS.html"  >KUBERNETS</a></li>
+		<li><a class="" href="/02 Areas/PKM.html"  >PKM</a></li>
+		<li><a class="" href="/02 Areas/PUPPET.html"  >PUPPET</a></li>
+		<li><a class="active" href="/02 Areas/RUBYonRAILS.html"  >RUBYonRAILS</a></li>
+		<li><a class="" href="/02 Areas/SERVICENOW.html"  >SERVICENOW</a></li>
+		<li><a class="" href="/02 Areas/Skepticism.html"  >Skepticism</a></li>
+		<li><a class="" href="/02 Areas/TERRAFORM.html"  >TERRAFORM</a></li>
+		<li><a class="" href="/02 Areas/WCF.html"  >WCF</a></li>
+	</ul>
+</div>
+<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">03 Resources</button>
+<div id="folder-container-3" class="dir-container requires_js " path="/03 Resources">
+	<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Articles</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="/03 Resources/Articles">
+		<ul class="dir-list">
+			<li><a class="" href="/03 Resources/Articles/50 Skeptic Concepts from “The Skeptics’ Guide to the Universe” by Steven Novella (Book Summary).html"  >50 Skeptic Concepts from “The Skeptics’ Guide to the Universe” by Steven Novella (Book Summary)</a></li>
+			<li><a class="" href="/03 Resources/Articles/Articles.html"  >Articles</a></li>
+			<li><a class="" href="/03 Resources/Articles/Building a Second Brain Summary.html"  >Building a Second Brain Summary</a></li>
+			<li><a class="" href="/03 Resources/Articles/Tiago Forte (@fortelabs).html"  >Tiago Forte (@fortelabs)</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Books</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="/03 Resources/Books">
+		<ul class="dir-list">
+			<li><a class="" href="/03 Resources/Books/Books.html"  >Books</a></li>
+			<li><a class="" href="/03 Resources/Books/Building a Second Brain.html"  >Building a Second Brain</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">Podcasts</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="/03 Resources/Podcasts">
+		<ul class="dir-list">
+			<li><a class="" href="/03 Resources/Podcasts/Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97.html"  >Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97</a></li>
+			<li><a class="" href="/03 Resources/Podcasts/Podcasts.html"  >Podcasts</a></li>
+			<li><a class="" href="/03 Resources/Podcasts/Show 68 - BLITZ Human Resources.html"  >Show 68 - BLITZ Human Resources</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/03 Resources/03 Resources.html"  >03 Resources</a></li>
+	</ul>
+</div>
+<button id="folder-7" class="dir-button" onclick="toggle_dir(this.id)">04 Archive</button>
+<div id="folder-container-7" class="dir-container requires_js " path="/04 Archive">
+	<ul class="dir-list">
+		<li><a class="" href="/04 Archive/04 Archive.html"  >04 Archive</a></li>
+		<li><a class="" href="/04 Archive/Evergreen Notes.html"  >Evergreen Notes</a></li>
+		<li><a class="" href="/04 Archive/like this.html"  >like this</a></li>
+	</ul>
+</div>
+<button id="folder-8" class="dir-button" onclick="toggle_dir(this.id)">05 Inbox</button>
+<div id="folder-container-8" class="dir-container requires_js " path="/05 Inbox">
+	<ul class="dir-list">
+		<li><a class="" href="/05 Inbox/05 Inbox.html"  >05 Inbox</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/Untitled.html"  >Untitled</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+	<li><a class="" href="/markdown-cheat-sheet.html"  >markdown-cheat-sheet</a></li>
+</ul>
+
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        localStorage.setItem('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = localStorage.getItem('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>
