@@ -52,4 +52,7 @@ The core problem that Kubernetes is solving is the ability to manage containeris
    
 -   Scheduling the Pods to run on certain nodes.   
 -   Auto-scaling up or down, horizontally or vertically, the Pods for us.   
--   Allowing the same application to run in multiple Pods with replicas.
+-   Allowing the same application to run in multiple Pods with replicas.   
+   
+   
+PDF-[https://iamondemand.com/wp-content/uploads/2019/11/Kubernetes-eBook.pdf](https://iamondemand.com/wp-content/uploads/2019/11/Kubernetes-eBook.pdf)

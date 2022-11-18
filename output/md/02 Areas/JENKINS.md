@@ -21,4 +21,7 @@ It is designed to help identify and fix integration and regression issues faster
    
 CD-   
    
-Integration and acceptance tests is now such that teams can apply the automated deployment techniques developed in the previous phase to push out new changes directly into production.
+Integration and acceptance tests is now such that teams can apply the automated deployment techniques developed in the previous phase to push out new changes directly into production.   
+   
+   
+PDF-[https://hrmpw.github.io/jenkins.io/user-handbook.pdf](https://hrmpw.github.io/jenkins.io/user-handbook.pdf)

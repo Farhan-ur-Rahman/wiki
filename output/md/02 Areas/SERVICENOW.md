@@ -10,23 +10,10 @@ Looked out the interface of the ticketing system that is ServiceNow.
    
 learned to raise a manual ticket by filling the ticket number and the issues facing in the ticket should be filled in the description box.   
    
-     
-   
 There is also a priority box that shows if the issue is low or high   
-   
-     
    
 Learned to add  users and groups and roles and how to manage them.   
    
-     
-   
-     
-   
-     
-   
-     
-   
-     
    
 If the issue is been resolved then it should be put to resolved if not then it should be assigned to the partner, After confirming with them the ticket should be set to (in process) and then submit the ticket.   
    

@@ -20,16 +20,15 @@ it is a tool that perform OS level virtualisation also known as containerisation
    
 It is a set of (Platform As a Service) that uses OS level virtualisation but on the other hand VMware uses Hardware level virtualisation   
    
-     
-docker installation   
-   
-[https://www.tutorialspoint.com/docker/docker_tutorial.pdf](https://www.tutorialspoint.com/docker/docker_tutorial.pdf)   
-   
-   
 **The complete lifecycle of a docker container revolves around five phases:**   
    
 -   Create phase.   
 -   Running phase.   
 -   Paused phase/unpause phase.   
 -   Stopped phase.   
--   Killed phase.
+-   Killed phase.   
+   
+     
+docker installation   
+   
+PDF-[https://www.tutorialspoint.com/docker/docker_tutorial.pdf](https://www.tutorialspoint.com/docker/docker_tutorial.pdf)
